@@ -605,7 +605,7 @@ class ProxyConverter {
                 <h3><i class="${icon}"></i> ${title}</h3>
                 <div class="link-box">
                     <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
-                    <pre style="margin: 0; white-space: pre-wrap;">${configs[format].substring(0, 500)}${configs[format].length > 500 ? '\n...(内容已截断)' : ''}</pre>
+                    <pre style="margin: 0; white-space: pre-wrap;">${configs[format]}</pre>
                 </div>
             `;
             
