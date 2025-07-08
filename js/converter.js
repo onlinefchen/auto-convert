@@ -1,11 +1,66 @@
 class ProxyConverter {
     constructor() {
         this.initializeEventListeners();
+        this.loadSavedData();
     }
 
     initializeEventListeners() {
         const form = document.getElementById('convertForm');
         form.addEventListener('submit', (e) => this.handleSubmit(e));
+        
+        // 监听输入变化，自动保存
+        const subscriptionUrl = document.getElementById('subscriptionUrl');
+        const githubToken = document.getElementById('githubToken');
+        const outputFormat = document.getElementById('outputFormat');
+        
+        subscriptionUrl.addEventListener('input', () => this.saveData());
+        githubToken.addEventListener('input', () => this.saveData());
+        outputFormat.addEventListener('change', () => this.saveData());
+    }
+
+    loadSavedData() {
+        try {
+            const savedData = localStorage.getItem('proxyConverterData');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                
+                if (data.subscriptionUrl) {
+                    document.getElementById('subscriptionUrl').value = data.subscriptionUrl;
+                }
+                if (data.githubToken) {
+                    document.getElementById('githubToken').value = data.githubToken;
+                }
+                if (data.outputFormat) {
+                    document.getElementById('outputFormat').value = data.outputFormat;
+                }
+            }
+        } catch (error) {
+            console.warn('加载保存的数据失败:', error);
+        }
+    }
+
+    saveData() {
+        try {
+            const data = {
+                subscriptionUrl: document.getElementById('subscriptionUrl').value,
+                githubToken: document.getElementById('githubToken').value,
+                outputFormat: document.getElementById('outputFormat').value
+            };
+            localStorage.setItem('proxyConverterData', JSON.stringify(data));
+        } catch (error) {
+            console.warn('保存数据失败:', error);
+        }
+    }
+
+    clearSavedData() {
+        try {
+            localStorage.removeItem('proxyConverterData');
+            document.getElementById('subscriptionUrl').value = '';
+            document.getElementById('githubToken').value = '';
+            document.getElementById('outputFormat').value = 'both';
+        } catch (error) {
+            console.warn('清除保存的数据失败:', error);
+        }
     }
 
     async handleSubmit(e) {
@@ -742,7 +797,17 @@ function copyToClipboard(button, customText = null) {
     });
 }
 
+// 全局变量用于存储 ProxyConverter 实例
+let proxyConverterInstance;
+
+// 清除保存数据的全局函数
+function clearSavedData() {
+    if (proxyConverterInstance) {
+        proxyConverterInstance.clearSavedData();
+    }
+}
+
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
-    new ProxyConverter();
+    proxyConverterInstance = new ProxyConverter();
 });

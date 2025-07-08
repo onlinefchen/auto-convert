@@ -98,6 +98,23 @@
             transform: none;
         }
 
+        .btn-clear {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn-clear:hover {
+            background: #c82333;
+        }
+
         .loading {
             display: none;
             text-align: center;
@@ -327,8 +344,18 @@
                     </small>
                 </div>
 
+                <div class="form-group">
+                    <small style="color: #28a745; display: block;">
+                        <i class="fas fa-info-circle"></i> 您的输入会自动保存到本地，刷新页面不会丢失
+                    </small>
+                </div>
+
                 <button type="submit" class="btn" id="convertBtn">
                     <i class="fas fa-magic"></i> 开始转换
+                </button>
+                
+                <button type="button" class="btn-clear" id="clearBtn" onclick="clearSavedData()">
+                    <i class="fas fa-trash"></i> 清除保存的数据
                 </button>
             </form>
 
