@@ -78,23 +78,40 @@ activate_venv() {
         # macOS/Linux
         source venv/bin/activate
     fi
-    log_success "虚拟环境已激活"
+    
+    # 验证虚拟环境是否激活成功
+    if [ -n "$VIRTUAL_ENV" ]; then
+        log_success "虚拟环境已激活: $VIRTUAL_ENV"
+    else
+        log_warning "虚拟环境可能未正确激活，但将继续使用绝对路径"
+    fi
 }
 
 # 安装依赖
 install_dependencies() {
     log_info "检查并安装依赖包..."
     
+    # 确保使用虚拟环境中的 pip
+    if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+        # Windows
+        PIP_CMD="venv/Scripts/pip"
+        PYTHON_CMD="venv/Scripts/python"
+    else
+        # macOS/Linux
+        PIP_CMD="venv/bin/pip"
+        PYTHON_CMD="venv/bin/python"
+    fi
+    
     # 升级pip
-    pip install --upgrade pip --quiet
+    $PIP_CMD install --upgrade pip --quiet
     
     # 安装依赖
     if [ -f "requirements.txt" ]; then
-        pip install -r requirements.txt --quiet
+        $PIP_CMD install -r requirements.txt --quiet
         log_success "依赖包安装完成"
     else
         log_warning "requirements.txt 文件不存在，手动安装依赖..."
-        pip install requests PyYAML --quiet
+        $PIP_CMD install requests PyYAML qrcode[pil] PyGithub --quiet
         log_success "依赖包安装完成"
     fi
 }
@@ -167,8 +184,17 @@ run_conversion() {
         fi
     fi
     
+    # 确保使用虚拟环境中的 Python
+    if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+        # Windows
+        PYTHON_CMD="venv/Scripts/python"
+    else
+        # macOS/Linux
+        PYTHON_CMD="venv/bin/python"
+    fi
+    
     # 运行转换脚本
-    python convert_subscription.py "${cmd_args[@]}"
+    $PYTHON_CMD convert_subscription.py "${cmd_args[@]}"
     
     if [ $? -eq 0 ]; then
         echo ""

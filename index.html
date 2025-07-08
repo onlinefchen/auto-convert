@@ -156,6 +156,26 @@
             font-size: 14px;
             word-break: break-all;
             position: relative;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .link-box::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .link-box::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .link-box::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+        
+        .link-box::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
         }
 
         .copy-btn {

@@ -256,8 +256,15 @@ class ProxyConverter {
             lines.push(`🚀 节点选择 = select, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push(`♻️ 自动选择 = url-test, ${proxyNames.join(', ')}, url=http://www.google.com/generate_204, interval=300`);
             lines.push(`🤖 人工智能 = select, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
+            lines.push(`📲 电报消息 = select, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
+            lines.push(`🎥 流媒体 = select, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
+            lines.push(`🎮 游戏平台 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
+            lines.push(`Ⓜ️ 微软服务 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
+            lines.push(`🍎 苹果服务 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
+            lines.push(`📢 谷歌FCM = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push('🎯 全球直连 = select, DIRECT, 🚀 节点选择');
             lines.push('🛑 全球拦截 = select, REJECT, DIRECT');
+            lines.push('🍃 应用净化 = select, REJECT, DIRECT');
             lines.push('🐟 漏网之鱼 = select, 🚀 节点选择, ♻️ 自动选择, DIRECT');
         }
         lines.push('');
@@ -267,8 +274,18 @@ class ProxyConverter {
         lines.push('DOMAIN-SUFFIX,openai.com,🤖 人工智能');
         lines.push('DOMAIN-SUFFIX,claude.ai,🤖 人工智能');
         lines.push('DOMAIN-SUFFIX,chatgpt.com,🤖 人工智能');
+        lines.push('DOMAIN-SUFFIX,telegram.org,📲 电报消息');
+        lines.push('DOMAIN-SUFFIX,t.me,📲 电报消息');
+        lines.push('DOMAIN-SUFFIX,netflix.com,🎥 流媒体');
+        lines.push('DOMAIN-SUFFIX,youtube.com,🎥 流媒体');
+        lines.push('DOMAIN-SUFFIX,steam.com,🎮 游戏平台');
+        lines.push('DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台');
+        lines.push('DOMAIN-SUFFIX,microsoft.com,Ⓜ️ 微软服务');
+        lines.push('DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务');
+        lines.push('DOMAIN-SUFFIX,apple.com,🍎 苹果服务');
+        lines.push('DOMAIN-SUFFIX,icloud.com,🍎 苹果服务');
+        lines.push('DOMAIN-SUFFIX,googleapis.com,📢 谷歌FCM');
         lines.push('DOMAIN-SUFFIX,google.com,🚀 节点选择');
-        lines.push('DOMAIN-SUFFIX,youtube.com,🚀 节点选择');
         lines.push('DOMAIN-SUFFIX,github.com,🚀 节点选择');
         lines.push('GEOIP,CN,🎯 全球直连');
         lines.push('FINAL,🐟 漏网之鱼');
@@ -352,12 +369,47 @@ class ProxyConverter {
                     proxies: ['🚀 节点选择', '♻️ 自动选择', ...proxyNames]
                 },
                 {
+                    name: '📲 电报消息',
+                    type: 'select',
+                    proxies: ['🚀 节点选择', '♻️ 自动选择', ...proxyNames]
+                },
+                {
+                    name: '🎥 流媒体',
+                    type: 'select',
+                    proxies: ['🚀 节点选择', '♻️ 自动选择', ...proxyNames]
+                },
+                {
+                    name: '🎮 游戏平台',
+                    type: 'select',
+                    proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
+                },
+                {
+                    name: 'Ⓜ️ 微软服务',
+                    type: 'select',
+                    proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
+                },
+                {
+                    name: '🍎 苹果服务',
+                    type: 'select',
+                    proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
+                },
+                {
+                    name: '📢 谷歌FCM',
+                    type: 'select',
+                    proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
+                },
+                {
                     name: '🎯 全球直连',
                     type: 'select',
                     proxies: ['DIRECT', '🚀 节点选择']
                 },
                 {
                     name: '🛑 全球拦截',
+                    type: 'select',
+                    proxies: ['REJECT', 'DIRECT']
+                },
+                {
+                    name: '🍃 应用净化',
                     type: 'select',
                     proxies: ['REJECT', 'DIRECT']
                 },
@@ -374,8 +426,18 @@ class ProxyConverter {
             'DOMAIN-SUFFIX,openai.com,🤖 人工智能',
             'DOMAIN-SUFFIX,claude.ai,🤖 人工智能',
             'DOMAIN-SUFFIX,chatgpt.com,🤖 人工智能',
+            'DOMAIN-SUFFIX,telegram.org,📲 电报消息',
+            'DOMAIN-SUFFIX,t.me,📲 电报消息',
+            'DOMAIN-SUFFIX,netflix.com,🎥 流媒体',
+            'DOMAIN-SUFFIX,youtube.com,🎥 流媒体',
+            'DOMAIN-SUFFIX,steam.com,🎮 游戏平台',
+            'DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台',
+            'DOMAIN-SUFFIX,microsoft.com,Ⓜ️ 微软服务',
+            'DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务',
+            'DOMAIN-SUFFIX,apple.com,🍎 苹果服务',
+            'DOMAIN-SUFFIX,icloud.com,🍎 苹果服务',
+            'DOMAIN-SUFFIX,googleapis.com,📢 谷歌FCM',
             'DOMAIN-SUFFIX,google.com,🚀 节点选择',
-            'DOMAIN-SUFFIX,youtube.com,🚀 节点选择',
             'DOMAIN-SUFFIX,github.com,🚀 节点选择',
             'GEOIP,CN,🎯 全球直连',
             'MATCH,🐟 漏网之鱼'
