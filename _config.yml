@@ -1,0 +1,39 @@
+# GitHub Pages 配置文件
+title: "代理订阅转换工具"
+description: "一键将代理订阅链接转换为 Surge 和 Clash 配置文件"
+url: "https://onlinefchen.github.io"
+baseurl: "/auto-convert"
+
+# 主题
+theme: minima
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Markdown 引擎
+markdown: kramdown
+highlighter: rouge
+
+# 排除的文件
+exclude:
+  - venv/
+  - .git/
+  - .gitignore
+  - requirements.txt
+  - "*.py"
+  - "*.sh"
+  - "*.bat"
+  - GIST_SETUP.md
+  - rules/
+
+# 包含的文件
+include:
+  - _config.yml
+
+# 社交媒体
+github_username: onlinefchen
+
+# 网站设置
+show_excerpts: false

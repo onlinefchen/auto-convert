@@ -666,6 +666,8 @@ def main():
     parser.add_argument('-o', '--output', default='config', help='Output file prefix (default: config)')
     parser.add_argument('-f', '--format', choices=['surge', 'clash', 'both'], default='both', 
                         help='Output format (default: both)')
+    parser.add_argument('--upload', action='store_true', help='Upload to private GitHub Gist and generate QR codes')
+    parser.add_argument('--github-token', help='GitHub personal access token for Gist upload')
     
     args = parser.parse_args()
     
@@ -724,6 +726,40 @@ def main():
         print(f"Clash configuration saved to {clash_file}")
     
     print("Conversion completed!")
+    
+    # Upload to Gist if requested
+    if args.upload:
+        generated_files = []
+        if args.format in ['surge', 'both']:
+            generated_files.append(surge_file)
+        if args.format in ['clash', 'both']:
+            generated_files.append(clash_file)
+        
+        try:
+            from gist_uploader import GistUploader
+            uploader = GistUploader(args.github_token)
+            
+            print("\n📤 上传配置文件到私有 GitHub Gist...")
+            gist = uploader.upload_files(
+                files=generated_files,
+                description=f"Proxy Config - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+                public=False
+            )
+            
+            if gist:
+                raw_urls = uploader.get_raw_urls(gist)
+                uploader.generate_qr_codes(raw_urls)
+                
+                print("\n🎉 上传成功!")
+                print("📱 扫描二维码即可导入配置!")
+                print(f"🔗 Gist 地址: {gist.html_url}")
+                print("🔒 这是私有 Gist，只有知道链接的人才能访问")
+            
+        except ImportError:
+            print("\n❌ 缺少依赖库，请安装:")
+            print("pip install qrcode[pil] PyGithub")
+        except Exception as e:
+            print(f"\n❌ 上传失败: {e}")
 
 
 if __name__ == '__main__':

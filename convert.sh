@@ -111,14 +111,22 @@ show_help() {
     echo "  订阅链接        必需，代理订阅链接地址"
     echo ""
     echo "选项:"
-    echo "  -o, --output    输出文件前缀 (默认: config)"
-    echo "  -f, --format    输出格式 surge/clash/both (默认: both)"
-    echo "  -h, --help      显示此帮助信息"
+    echo "  -o, --output       输出文件前缀 (默认: config)"
+    echo "  -f, --format       输出格式 surge/clash/both (默认: both)"
+    echo "  --upload           上传到私有 GitHub Gist 并生成二维码"
+    echo "  --github-token     GitHub 个人访问令牌"
+    echo "  -h, --help         显示此帮助信息"
     echo ""
     echo "示例:"
     echo "  $0 https://example.com/subscription"
     echo "  $0 https://example.com/subscription -o my_config"
     echo "  $0 https://example.com/subscription -f surge"
+    echo "  $0 https://example.com/subscription --upload --github-token YOUR_TOKEN"
+    echo ""
+    echo "GitHub Token 设置:"
+    echo "  1. 访问 https://github.com/settings/tokens"
+    echo "  2. 创建新 token，勾选 'gist' 权限"
+    echo "  3. 使用 --github-token 参数或设置 GITHUB_TOKEN 环境变量"
     echo ""
 }
 
@@ -137,15 +145,30 @@ run_conversion() {
     local subscription_url="$1"
     local output_prefix="$2"
     local format="$3"
+    local upload="$4"
+    local github_token="$5"
     
     log_info "开始转换订阅链接..."
     log_info "订阅地址: $subscription_url"
     log_info "输出前缀: $output_prefix"
     log_info "输出格式: $format"
+    if [ "$upload" = true ]; then
+        log_info "上传到 Gist: 是"
+    fi
     echo ""
     
+    # 构建命令参数
+    cmd_args=("$subscription_url" -o "$output_prefix" -f "$format")
+    
+    if [ "$upload" = true ]; then
+        cmd_args+=(--upload)
+        if [ -n "$github_token" ]; then
+            cmd_args+=(--github-token "$github_token")
+        fi
+    fi
+    
     # 运行转换脚本
-    python convert_subscription.py "$subscription_url" -o "$output_prefix" -f "$format"
+    python convert_subscription.py "${cmd_args[@]}"
     
     if [ $? -eq 0 ]; then
         echo ""
@@ -197,6 +220,8 @@ main() {
     SUBSCRIPTION_URL=""
     OUTPUT_PREFIX="config"
     FORMAT="both"
+    UPLOAD=false
+    GITHUB_TOKEN=""
     
     while [[ $# -gt 0 ]]; do
         case $1 in
@@ -214,6 +239,14 @@ main() {
                     log_error "格式参数只能是 surge、clash 或 both"
                     exit 1
                 fi
+                shift 2
+                ;;
+            --upload)
+                UPLOAD=true
+                shift
+                ;;
+            --github-token)
+                GITHUB_TOKEN="$2"
                 shift 2
                 ;;
             -*)
@@ -265,7 +298,7 @@ main() {
     create_venv
     activate_venv
     install_dependencies
-    run_conversion "$SUBSCRIPTION_URL" "$OUTPUT_PREFIX" "$FORMAT"
+    run_conversion "$SUBSCRIPTION_URL" "$OUTPUT_PREFIX" "$FORMAT" "$UPLOAD" "$GITHUB_TOKEN"
     
     echo ""
     log_success "🎉 所有操作完成！"

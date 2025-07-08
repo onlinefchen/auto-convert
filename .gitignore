@@ -3,9 +3,12 @@ venv/
 .venv/
 
 # Generated Configuration Files
-*.conf
-*.yaml
-*.yml
+config.*.conf
+config.*.yaml
+config.*.yml
+
+# QR Code output
+qr_codes/
 
 # Python
 __pycache__/
