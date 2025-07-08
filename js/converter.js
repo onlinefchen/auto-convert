@@ -290,10 +290,8 @@ class ProxyConverter {
             lines.push(`🤖 人工智能 = select, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push(`📲 电报消息 = select, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push(`🎥 流媒体 = select, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
-            lines.push(`🎮 游戏平台 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push(`Ⓜ️ 微软服务 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push(`🍎 苹果服务 = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
-            lines.push(`📢 谷歌FCM = select, DIRECT, 🚀 节点选择, ♻️ 自动选择, ${proxyNames.join(', ')}`);
             lines.push('🎯 全球直连 = select, DIRECT, 🚀 节点选择');
             lines.push('🛑 全球拦截 = select, REJECT, DIRECT');
             lines.push('🍃 应用净化 = select, REJECT, DIRECT');
@@ -313,16 +311,13 @@ class ProxyConverter {
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/ai.txt,🤖 人工智能');
         // 电报消息
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/telegram.txt,📲 电报消息');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/telegram_ip.txt,📲 电报消息');
         // 流媒体
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/stream.txt,🎥 流媒体');
-        // 游戏平台
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/game.txt,🎮 游戏平台');
         // 微软服务
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/microsoft.txt,Ⓜ️ 微软服务');
         // 苹果服务
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/apple.txt,🍎 苹果服务');
-        // 谷歌FCM
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/google_fcm.txt,📢 谷歌FCM');
         // 全球代理
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/global.txt,🚀 节点选择');
         // 中国直连
@@ -420,22 +415,12 @@ class ProxyConverter {
                     proxies: ['🚀 节点选择', '♻️ 自动选择', ...proxyNames]
                 },
                 {
-                    name: '🎮 游戏平台',
-                    type: 'select',
-                    proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
-                },
-                {
                     name: 'Ⓜ️ 微软服务',
                     type: 'select',
                     proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
                 },
                 {
                     name: '🍎 苹果服务',
-                    type: 'select',
-                    proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
-                },
-                {
-                    name: '📢 谷歌FCM',
                     type: 'select',
                     proxies: ['DIRECT', '🚀 节点选择', '♻️ 自动选择', ...proxyNames]
                 },
@@ -473,16 +458,13 @@ class ProxyConverter {
             'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/ai.txt,🤖 人工智能',
             // 电报消息
             'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/telegram.txt,📲 电报消息',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/telegram_ip.txt,📲 电报消息',
             // 流媒体
             'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/stream.txt,🎥 流媒体',
-            // 游戏平台
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/game.txt,🎮 游戏平台',
             // 微软服务
             'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/microsoft.txt,Ⓜ️ 微软服务',
             // 苹果服务
             'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/apple.txt,🍎 苹果服务',
-            // 谷歌FCM
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/google_fcm.txt,📢 谷歌FCM',
             // 全球代理
             'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/global.txt,🚀 节点选择',
             // 中国直连
