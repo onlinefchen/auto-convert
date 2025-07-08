@@ -1,7 +1,7 @@
 # GLOBAL Rules (CLASH)
-# Generated at 2025-07-09 01:10:03
-# Sources: sukka_surge, sukka_clash, acl4ssr
-# Total rules: 1062
+# Generated at 2025-07-09 01:24:32
+# Sources: sukka_clash, acl4ssr
+# Total rules: 1061
 
 DOMAIN,ccmdl.adobe.com
 DOMAIN,community.oneplus.com
@@ -1064,4 +1064,3 @@ DOMAIN-SUFFIX,zbporn.com
 DOMAIN-SUFFIX,zello.com
 DOMAIN-SUFFIX,zendesk.com
 DOMAIN-SUFFIX,zndsk.com
-USER-AGENT,Roam*

@@ -1,9 +1,8 @@
 # CHINA_IP Rules (CLASH)
-# Generated at 2025-07-09 01:10:04
-# Sources: sukka_surge, sukka_clash
-# Total rules: 3881
+# Generated at 2025-07-09 01:24:33
+# Sources: sukka_clash
+# Total rules: 3880
 
-DOMAIN,th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe
 IP-CIDR,1.1.8.0/24
 IP-CIDR,1.116.0.0/15
 IP-CIDR,1.119.0.0/17

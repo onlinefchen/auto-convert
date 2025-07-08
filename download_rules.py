@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download and process rule sets for Surge and Clash separately
+Download and process rule sets for Surge and Clash with format-specific sources
 """
 
 import requests
@@ -8,15 +8,58 @@ import os
 import time
 from typing import Dict, List, Set
 
-# 规则集URL映射，按功能分组
-RULE_GROUPS = {
+# Surge 专用规则源 (优先使用原生 Surge 格式)
+SURGE_RULE_SOURCES = {
     'lan': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/lan.conf',
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/lan.conf'
+    },
+    'reject': {
+        'sukka_domainset': 'https://ruleset.skk.moe/List/domainset/reject.conf'
+    },
+    'reject_app': {
+        'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list'
+    },
+    'ai': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/ai.conf'
+    },
+    'telegram': {
+        'sukka_surge_non_ip': 'https://ruleset.skk.moe/List/non_ip/telegram.conf',
+        'sukka_surge_ip': 'https://ruleset.skk.moe/List/ip/telegram.conf'
+    },
+    'stream': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/stream.conf'
+    },
+    'microsoft': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/microsoft.conf'
+    },
+    'apple': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/apple_services.conf'
+    },
+    'google_fcm': {
+        'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list'
+    },
+    'game': {
+        'acl4ssr_steam': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list',
+        'acl4ssr_epic': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list'
+    },
+    'domestic': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/domestic.conf'
+    },
+    'global': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/global.conf'
+    },
+    'china_ip': {
+        'sukka_surge': 'https://ruleset.skk.moe/List/ip/china_ip.conf'
+    }
+}
+
+# Clash 专用规则源 (使用 Clash 格式源，获得更好的覆盖)
+CLASH_RULE_SOURCES = {
+    'lan': {
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/lan.txt',
         'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list'
     },
     'reject': {
-        'sukka_domainset': 'https://ruleset.skk.moe/List/domainset/reject.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/domainset/reject.txt',
         'acl4ssr_ad': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list'
     },
@@ -24,27 +67,21 @@ RULE_GROUPS = {
         'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list'
     },
     'ai': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/ai.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/ai.txt'
     },
     'telegram': {
-        'sukka_surge_non_ip': 'https://ruleset.skk.moe/List/non_ip/telegram.conf',
-        'sukka_surge_ip': 'https://ruleset.skk.moe/List/ip/telegram.conf',
         'sukka_clash_non_ip': 'https://ruleset.skk.moe/Clash/non_ip/telegram.txt',
         'sukka_clash_ip': 'https://ruleset.skk.moe/Clash/ip/telegram.txt'
     },
     'stream': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/stream.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/stream.txt',
         'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list'
     },
     'microsoft': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/microsoft.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/microsoft.txt',
         'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list'
     },
     'apple': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/apple_services.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/apple_services.txt',
         'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list'
     },
@@ -56,18 +93,15 @@ RULE_GROUPS = {
         'acl4ssr_epic': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list'
     },
     'domestic': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/domestic.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/domestic.txt',
         'acl4ssr_domain': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list',
         'acl4ssr_ip': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list'
     },
     'global': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/non_ip/global.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/non_ip/global.txt',
         'acl4ssr': 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list'
     },
     'china_ip': {
-        'sukka_surge': 'https://ruleset.skk.moe/List/ip/china_ip.conf',
         'sukka_clash': 'https://ruleset.skk.moe/Clash/ip/china_ip.txt'
     }
 }
@@ -110,17 +144,17 @@ def normalize_rule_surge(line: str) -> str:
     if ',' in line:
         parts = line.split(',')
         rule_type = parts[0]
-        rule_value = parts[1]
+        rule_value = parts[1] if len(parts) > 1 else ""
         
         # Skip unsupported rule types for Surge
         if rule_type in ['DOMAIN-WILDCARD', 'USER-AGENT']:
             return ""
         
-        if rule_type in ['DOMAIN', 'DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'GEOIP', 'DOMAIN-REGEX']:
+        if rule_type in ['DOMAIN', 'DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'GEOIP', 'DOMAIN-REGEX', 'PROCESS-NAME']:
             return f"{rule_type},{rule_value}"
     
     # Handle naked domain
-    if '.' in line and not line.startswith('.') and not line.startswith('+'):
+    if '.' in line and not line.startswith('.') and not line.startswith('+') and not line.startswith('DOMAIN'):
         return f"DOMAIN,{line}"
     
     # Handle special cases like ".data"
@@ -151,13 +185,14 @@ def normalize_rule_clash(line: str) -> str:
     if ',' in line:
         parts = line.split(',')
         rule_type = parts[0]
-        rule_value = parts[1]
+        rule_value = parts[1] if len(parts) > 1 else ""
         
-        if rule_type in ['DOMAIN', 'DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'GEOIP', 'DOMAIN-REGEX', 'DOMAIN-WILDCARD', 'USER-AGENT']:
+        # Clash supports all rule types
+        if rule_type in ['DOMAIN', 'DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'GEOIP', 'DOMAIN-REGEX', 'DOMAIN-WILDCARD', 'USER-AGENT', 'PROCESS-NAME']:
             return f"{rule_type},{rule_value}"
     
     # Handle naked domain
-    if '.' in line and not line.startswith('.') and not line.startswith('+'):
+    if '.' in line and not line.startswith('.') and not line.startswith('+') and not line.startswith('DOMAIN'):
         return f"DOMAIN,{line}"
     
     # Handle special cases like ".data"
@@ -183,16 +218,18 @@ def process_rules_for_format(rule_contents: List[str], format_type: str) -> List
     return sorted(list(rules))
 
 def create_rule_files():
-    """Download and process rule files for both formats"""
+    """Download and process rule files for both formats with format-specific sources"""
     os.makedirs('rules/surge', exist_ok=True)
     os.makedirs('rules/clash', exist_ok=True)
     
-    print("📥 Starting rule download and processing...")
+    print("📥 Starting format-specific rule download and processing...")
     
-    for group_name, urls in RULE_GROUPS.items():
-        print(f"\n🔄 Processing {group_name} rules...")
+    # Process Surge rules
+    print("\n🔄 Processing Surge rules...")
+    for group_name, urls in SURGE_RULE_SOURCES.items():
+        print(f"\n  📋 Processing {group_name} rules for Surge...")
         
-        # Download all rule contents for this group
+        # Download Surge-specific sources
         rule_contents = []
         for source_name, url in urls.items():
             content = download_file(url)
@@ -200,38 +237,77 @@ def create_rule_files():
                 rule_contents.append(content)
         
         if not rule_contents:
-            print(f"  ⚠️  No content downloaded for {group_name}")
+            print(f"    ⚠️  No content downloaded for {group_name}")
             continue
         
-        # Process for both formats
-        for format_type in ['surge', 'clash']:
-            processed_rules = process_rules_for_format(rule_contents, format_type)
-            
-            if not processed_rules:
-                print(f"  ⚠️  No valid {format_type} rules found for {group_name}")
-                continue
-            
-            # Generate header
-            header = f"""# {group_name.upper()} Rules ({format_type.upper()})
+        # Process rules for Surge
+        processed_rules = process_rules_for_format(rule_contents, 'surge')
+        
+        if not processed_rules:
+            print(f"    ⚠️  No valid Surge rules found for {group_name}")
+            continue
+        
+        # Generate header
+        header = f"""# {group_name.upper()} Rules (SURGE)
 # Generated at {time.strftime('%Y-%m-%d %H:%M:%S')}
 # Sources: {', '.join(urls.keys())}
 # Total rules: {len(processed_rules)}
 
 """
-            
-            # Create rule file
-            rule_content = header + '\n'.join(processed_rules)
-            
-            # Write file
-            with open(f'rules/{format_type}/{group_name}.txt', 'w', encoding='utf-8') as f:
-                f.write(rule_content)
-            
-            print(f"  ✅ Created {format_type}/{group_name}.txt ({len(processed_rules)} rules)")
+        
+        # Create rule file
+        rule_content = header + '\n'.join(processed_rules)
+        
+        # Write file
+        with open(f'rules/surge/{group_name}.txt', 'w', encoding='utf-8') as f:
+            f.write(rule_content)
+        
+        print(f"    ✅ Created surge/{group_name}.txt ({len(processed_rules)} rules)")
     
-    print(f"\n🎉 Rule processing completed!")
+    # Process Clash rules
+    print("\n🔄 Processing Clash rules...")
+    for group_name, urls in CLASH_RULE_SOURCES.items():
+        print(f"\n  📋 Processing {group_name} rules for Clash...")
+        
+        # Download Clash-specific sources
+        rule_contents = []
+        for source_name, url in urls.items():
+            content = download_file(url)
+            if content:
+                rule_contents.append(content)
+        
+        if not rule_contents:
+            print(f"    ⚠️  No content downloaded for {group_name}")
+            continue
+        
+        # Process rules for Clash
+        processed_rules = process_rules_for_format(rule_contents, 'clash')
+        
+        if not processed_rules:
+            print(f"    ⚠️  No valid Clash rules found for {group_name}")
+            continue
+        
+        # Generate header
+        header = f"""# {group_name.upper()} Rules (CLASH)
+# Generated at {time.strftime('%Y-%m-%d %H:%M:%S')}
+# Sources: {', '.join(urls.keys())}
+# Total rules: {len(processed_rules)}
+
+"""
+        
+        # Create rule file
+        rule_content = header + '\n'.join(processed_rules)
+        
+        # Write file
+        with open(f'rules/clash/{group_name}.txt', 'w', encoding='utf-8') as f:
+            f.write(rule_content)
+        
+        print(f"    ✅ Created clash/{group_name}.txt ({len(processed_rules)} rules)")
+    
+    print(f"\n🎉 Format-specific rule processing completed!")
     print(f"📁 Files saved to:")
-    print(f"  - rules/surge/ (Surge format)")
-    print(f"  - rules/clash/ (Clash format)")
+    print(f"  - rules/surge/ (Surge-optimized sources)")
+    print(f"  - rules/clash/ (Clash-optimized sources)")
 
 if __name__ == '__main__':
     create_rule_files()

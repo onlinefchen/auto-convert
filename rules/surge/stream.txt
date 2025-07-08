@@ -1,22 +1,10 @@
 # STREAM Rules (SURGE)
-# Generated at 2025-07-09 01:09:26
-# Sources: sukka_surge, sukka_clash, acl4ssr
+# Generated at 2025-07-09 01:23:26
+# Sources: sukka_surge
 # Total rules: 279
 
 DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
 DOMAIN,4gtvfreepcvod-cds.cdn.hinet.net
-DOMAIN,PROCESS-NAME,com.amazon.avod.thirdpartyclient
-DOMAIN,PROCESS-NAME,com.bstar.intl
-DOMAIN,PROCESS-NAME,com.hktve.viutv
-DOMAIN,PROCESS-NAME,com.hulu.plus
-DOMAIN,PROCESS-NAME,com.linecorp.linetv
-DOMAIN,PROCESS-NAME,com.netflix.mediaclient
-DOMAIN,PROCESS-NAME,com.tencent.ibg.joox
-DOMAIN,PROCESS-NAME,com.twgood.android
-DOMAIN,PROCESS-NAME,com.viu.pad
-DOMAIN,PROCESS-NAME,com.viu.phone
-DOMAIN,PROCESS-NAME,com.vuclip.viu
-DOMAIN,PROCESS-NAME,tv.twitch.android.app
 DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
 DOMAIN,apm-misaka.biliapi.net
 DOMAIN,bbc.mp-pxcdn.com
@@ -280,5 +268,17 @@ DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtubeeducation.com
 DOMAIN-SUFFIX,youtubegaming.com
 DOMAIN-SUFFIX,youtubekids.com
+PROCESS-NAME,com.amazon.avod.thirdpartyclient
+PROCESS-NAME,com.bstar.intl
+PROCESS-NAME,com.hktve.viutv
+PROCESS-NAME,com.hulu.plus
+PROCESS-NAME,com.linecorp.linetv
+PROCESS-NAME,com.netflix.mediaclient
+PROCESS-NAME,com.tencent.ibg.joox
+PROCESS-NAME,com.twgood.android
+PROCESS-NAME,com.viu.pad
+PROCESS-NAME,com.viu.phone
+PROCESS-NAME,com.vuclip.viu
 PROCESS-NAME,music
 PROCESS-NAME,tv
+PROCESS-NAME,tv.twitch.android.app

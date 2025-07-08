@@ -1,10 +1,8 @@
 # APPLE Rules (CLASH)
-# Generated at 2025-07-09 01:09:35
-# Sources: sukka_surge, sukka_clash, acl4ssr
+# Generated at 2025-07-09 01:24:07
+# Sources: sukka_clash, acl4ssr
 # Total rules: 27
 
-DOMAIN,PROCESS-NAME,com.apple.Maps
-DOMAIN,PROCESS-NAME,com.apple.geod
 DOMAIN,th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-cloudkit.com
@@ -25,6 +23,8 @@ DOMAIN-SUFFIX,push-apple.com.akadns.net
 PROCESS-NAME,CoreLocationAgent
 PROCESS-NAME,WeatherWidget
 PROCESS-NAME,apsd
+PROCESS-NAME,com.apple.Maps
+PROCESS-NAME,com.apple.geod
 PROCESS-NAME,findmydevice-user-agent
 PROCESS-NAME,fmfd
 PROCESS-NAME,mapspushd

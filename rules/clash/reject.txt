@@ -1,9 +1,8 @@
 # REJECT Rules (CLASH)
-# Generated at 2025-07-09 01:09:16
-# Sources: sukka_domainset, sukka_clash, acl4ssr_ad
-# Total rules: 83714
+# Generated at 2025-07-09 01:23:49
+# Sources: sukka_clash, acl4ssr_ad
+# Total rules: 83713
 
-DOMAIN,.data
 DOMAIN,03.lzzncm.com
 DOMAIN,04.lzzncm.com
 DOMAIN,1oavsblobprodcus350.blob.core.windows.net

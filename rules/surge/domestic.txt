@@ -1,7 +1,7 @@
 # DOMESTIC Rules (SURGE)
-# Generated at 2025-07-09 01:09:57
-# Sources: sukka_surge, sukka_clash, acl4ssr_domain, acl4ssr_ip
-# Total rules: 799
+# Generated at 2025-07-09 01:23:39
+# Sources: sukka_surge
+# Total rules: 794
 
 DOMAIN,acg.tv
 DOMAIN,assets1.xboxlive.cn
@@ -22,11 +22,6 @@ DOMAIN,th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe
 DOMAIN,url.cn
 DOMAIN,www.intel.cn
 DOMAIN,www.layuicdn.com
-DOMAIN-REGEX,^[\w.-]*?\.ffzy-online[\w.-]\.com$
-DOMAIN-REGEX,^[\w.-]*?\.ffzy-play[\w.-]\.com$
-DOMAIN-REGEX,^[\w.-]*?\.lz-cdn[\w.-][\w.-]\.com$
-DOMAIN-REGEX,^[\w.-]*?\.lz-cdn[\w.-]\.com$
-DOMAIN-REGEX,^[\w.-]*?\.qhimgs[\w.-]\.com$
 DOMAIN-SUFFIX,10010.com
 DOMAIN-SUFFIX,10086.cn
 DOMAIN-SUFFIX,111.com

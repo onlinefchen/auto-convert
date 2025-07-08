@@ -1,7 +1,7 @@
 # REJECT Rules (SURGE)
-# Generated at 2025-07-09 01:09:16
-# Sources: sukka_domainset, sukka_clash, acl4ssr_ad
-# Total rules: 83714
+# Generated at 2025-07-09 01:23:20
+# Sources: sukka_domainset
+# Total rules: 83713
 
 DOMAIN,.data
 DOMAIN,03.lzzncm.com
@@ -17666,7 +17666,6 @@ DOMAIN-SUFFIX,dashgreen.online
 DOMAIN-SUFFIX,daslkdlqk.top
 DOMAIN-SUFFIX,dasych.drmartypets.com
 DOMAIN-SUFFIX,dat.drgkitzmann-akademie.de
-DOMAIN-SUFFIX,data
 DOMAIN-SUFFIX,data-00460c60fa.eurotransport.de
 DOMAIN-SUFFIX,data-004e4e6793.wetter.at
 DOMAIN-SUFFIX,data-007f9d19c8.sbz-monteur.de
