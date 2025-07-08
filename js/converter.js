@@ -35,7 +35,7 @@ class ProxyConverter {
             }
 
             // 生成配置
-            const configs = this.generateConfigs(proxies, outputFormat);
+            const configs = await this.generateConfigs(proxies, outputFormat);
             
             // 如果有 GitHub Token，上传到 Gist
             let gistResults = null;
@@ -206,12 +206,12 @@ class ProxyConverter {
         }
     }
 
-    generateConfigs(proxies, format) {
+    async generateConfigs(proxies, format) {
         const configs = {};
         const timestamp = new Date().toLocaleString('zh-CN');
         
         if (format === 'surge' || format === 'both') {
-            configs.surge = this.generateSurgeConfig(proxies, timestamp);
+            configs.surge = await this.generateSurgeConfig(proxies, timestamp);
         }
         
         if (format === 'clash' || format === 'both') {
@@ -221,7 +221,7 @@ class ProxyConverter {
         return configs;
     }
 
-    generateSurgeConfig(proxies, timestamp) {
+    async generateSurgeConfig(proxies, timestamp) {
         const lines = [];
         
         // Header
@@ -269,25 +269,34 @@ class ProxyConverter {
         }
         lines.push('');
         
-        // Rules (简化版)
+        // Rules (使用完整规则集)
         lines.push('[Rule]');
-        lines.push('DOMAIN-SUFFIX,openai.com,🤖 人工智能');
-        lines.push('DOMAIN-SUFFIX,claude.ai,🤖 人工智能');
-        lines.push('DOMAIN-SUFFIX,chatgpt.com,🤖 人工智能');
-        lines.push('DOMAIN-SUFFIX,telegram.org,📲 电报消息');
-        lines.push('DOMAIN-SUFFIX,t.me,📲 电报消息');
-        lines.push('DOMAIN-SUFFIX,netflix.com,🎥 流媒体');
-        lines.push('DOMAIN-SUFFIX,youtube.com,🎥 流媒体');
-        lines.push('DOMAIN-SUFFIX,steam.com,🎮 游戏平台');
-        lines.push('DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台');
-        lines.push('DOMAIN-SUFFIX,microsoft.com,Ⓜ️ 微软服务');
-        lines.push('DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务');
-        lines.push('DOMAIN-SUFFIX,apple.com,🍎 苹果服务');
-        lines.push('DOMAIN-SUFFIX,icloud.com,🍎 苹果服务');
-        lines.push('DOMAIN-SUFFIX,googleapis.com,📢 谷歌FCM');
-        lines.push('DOMAIN-SUFFIX,google.com,🚀 节点选择');
-        lines.push('DOMAIN-SUFFIX,github.com,🚀 节点选择');
-        lines.push('GEOIP,CN,🎯 全球直连');
+        
+        // 本地/局域网地址
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/lan.txt,🎯 全球直连');
+        // 拦截规则
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject.txt,🛑 全球拦截');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject_app.txt,🍃 应用净化');
+        // AI服务
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/ai.txt,🤖 人工智能');
+        // 电报消息
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/telegram.txt,📲 电报消息');
+        // 流媒体
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/stream.txt,🎥 流媒体');
+        // 游戏平台
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/game.txt,🎮 游戏平台');
+        // 微软服务
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/microsoft.txt,Ⓜ️ 微软服务');
+        // 苹果服务
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/apple.txt,🍎 苹果服务');
+        // 谷歌FCM
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/google_fcm.txt,📢 谷歌FCM');
+        // 全球代理
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/global.txt,🚀 节点选择');
+        // 中国直连
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/domestic.txt,🎯 全球直连');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/china_ip.txt,🎯 全球直连');
+        // 漏网之鱼
         lines.push('FINAL,🐟 漏网之鱼');
         
         return lines.join('\n');
@@ -421,25 +430,33 @@ class ProxyConverter {
             ];
         }
         
-        // Rules (简化版)
+        // Rules (使用完整规则集)
         config.rules = [
-            'DOMAIN-SUFFIX,openai.com,🤖 人工智能',
-            'DOMAIN-SUFFIX,claude.ai,🤖 人工智能',
-            'DOMAIN-SUFFIX,chatgpt.com,🤖 人工智能',
-            'DOMAIN-SUFFIX,telegram.org,📲 电报消息',
-            'DOMAIN-SUFFIX,t.me,📲 电报消息',
-            'DOMAIN-SUFFIX,netflix.com,🎥 流媒体',
-            'DOMAIN-SUFFIX,youtube.com,🎥 流媒体',
-            'DOMAIN-SUFFIX,steam.com,🎮 游戏平台',
-            'DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台',
-            'DOMAIN-SUFFIX,microsoft.com,Ⓜ️ 微软服务',
-            'DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务',
-            'DOMAIN-SUFFIX,apple.com,🍎 苹果服务',
-            'DOMAIN-SUFFIX,icloud.com,🍎 苹果服务',
-            'DOMAIN-SUFFIX,googleapis.com,📢 谷歌FCM',
-            'DOMAIN-SUFFIX,google.com,🚀 节点选择',
-            'DOMAIN-SUFFIX,github.com,🚀 节点选择',
-            'GEOIP,CN,🎯 全球直连',
+            // 本地/局域网地址
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/lan.txt,🎯 全球直连',
+            // 拦截规则
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject.txt,🛑 全球拦截',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject_app.txt,🍃 应用净化',
+            // AI服务
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/ai.txt,🤖 人工智能',
+            // 电报消息
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/telegram.txt,📲 电报消息',
+            // 流媒体
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/stream.txt,🎥 流媒体',
+            // 游戏平台
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/game.txt,🎮 游戏平台',
+            // 微软服务
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/microsoft.txt,Ⓜ️ 微软服务',
+            // 苹果服务
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/apple.txt,🍎 苹果服务',
+            // 谷歌FCM
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/google_fcm.txt,📢 谷歌FCM',
+            // 全球代理
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/global.txt,🚀 节点选择',
+            // 中国直连
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/domestic.txt,🎯 全球直连',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/china_ip.txt,🎯 全球直连',
+            // 漏网之鱼
             'MATCH,🐟 漏网之鱼'
         ];
         
