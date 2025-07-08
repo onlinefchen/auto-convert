@@ -305,29 +305,29 @@ class ProxyConverter {
         lines.push('[Rule]');
         
         // 本地/局域网地址
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/lan.txt,🎯 全球直连');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/lan.txt,🎯 全球直连');
         // 拦截规则
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject.txt,🛑 全球拦截');
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject_app.txt,🍃 应用净化');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/reject.txt,🛑 全球拦截');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/reject_app.txt,🍃 应用净化');
         // AI服务
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/ai.txt,🤖 人工智能');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/ai.txt,🤖 人工智能');
         // 电报消息
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/telegram.txt,📲 电报消息');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/telegram.txt,📲 电报消息');
         // 流媒体
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/stream.txt,🎥 流媒体');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/stream.txt,🎥 流媒体');
         // 游戏平台
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/game.txt,🎮 游戏平台');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/game.txt,🎮 游戏平台');
         // 微软服务
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/microsoft.txt,Ⓜ️ 微软服务');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/microsoft.txt,Ⓜ️ 微软服务');
         // 苹果服务
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/apple.txt,🍎 苹果服务');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/apple.txt,🍎 苹果服务');
         // 谷歌FCM
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/google_fcm.txt,📢 谷歌FCM');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/google_fcm.txt,📢 谷歌FCM');
         // 全球代理
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/global.txt,🚀 节点选择');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/global.txt,🚀 节点选择');
         // 中国直连
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/domestic.txt,🎯 全球直连');
-        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/china_ip.txt,🎯 全球直连');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/domestic.txt,🎯 全球直连');
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/china_ip.txt,🎯 全球直连');
         // 漏网之鱼
         lines.push('FINAL,🐟 漏网之鱼');
         
@@ -465,29 +465,29 @@ class ProxyConverter {
         // Rules (使用完整规则集)
         config.rules = [
             // 本地/局域网地址
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/lan.txt,🎯 全球直连',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/lan.txt,🎯 全球直连',
             // 拦截规则
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject.txt,🛑 全球拦截',
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/reject_app.txt,🍃 应用净化',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/reject.txt,🛑 全球拦截',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/reject_app.txt,🍃 应用净化',
             // AI服务
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/ai.txt,🤖 人工智能',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/ai.txt,🤖 人工智能',
             // 电报消息
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/telegram.txt,📲 电报消息',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/telegram.txt,📲 电报消息',
             // 流媒体
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/stream.txt,🎥 流媒体',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/stream.txt,🎥 流媒体',
             // 游戏平台
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/game.txt,🎮 游戏平台',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/game.txt,🎮 游戏平台',
             // 微软服务
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/microsoft.txt,Ⓜ️ 微软服务',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/microsoft.txt,Ⓜ️ 微软服务',
             // 苹果服务
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/apple.txt,🍎 苹果服务',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/apple.txt,🍎 苹果服务',
             // 谷歌FCM
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/google_fcm.txt,📢 谷歌FCM',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/google_fcm.txt,📢 谷歌FCM',
             // 全球代理
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/global.txt,🚀 节点选择',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/global.txt,🚀 节点选择',
             // 中国直连
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/domestic.txt,🎯 全球直连',
-            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/china_ip.txt,🎯 全球直连',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/domestic.txt,🎯 全球直连',
+            'RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/china_ip.txt,🎯 全球直连',
             // 漏网之鱼
             'MATCH,🐟 漏网之鱼'
         ];

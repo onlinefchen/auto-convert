@@ -1,7 +1,7 @@
-# LAN Rules
-# Generated at 2025-07-08 22:17:08
+# LAN Rules (CLASH)
+# Generated at 2025-07-09 01:09:10
 # Sources: sukka_surge, sukka_clash, acl4ssr
-# Total rules: 78
+# Total rules: 50
 
 DOMAIN,aterm.me
 DOMAIN,console.gl-inet.com
@@ -15,7 +15,6 @@ DOMAIN,router.asus.com
 DOMAIN,setmeup.arubanetworks.com
 DOMAIN,th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe
 DOMAIN,unifi
-DOMAIN,www.asusrouter.com
 DOMAIN-SUFFIX,10.in-addr.arpa
 DOMAIN-SUFFIX,16.172.in-addr.arpa
 DOMAIN-SUFFIX,168.192.in-addr.arpa
@@ -35,31 +34,18 @@ DOMAIN-SUFFIX,28.172.in-addr.arpa
 DOMAIN-SUFFIX,29.172.in-addr.arpa
 DOMAIN-SUFFIX,30.172.in-addr.arpa
 DOMAIN-SUFFIX,31.172.in-addr.arpa
-DOMAIN-SUFFIX,acl4.ssr
 DOMAIN-SUFFIX,asusrouter.com
-DOMAIN-SUFFIX,hiwifi.com
 DOMAIN-SUFFIX,home
 DOMAIN-SUFFIX,home.arpa
 DOMAIN-SUFFIX,huaweimobilewifi.com
 DOMAIN-SUFFIX,internal
-DOMAIN-SUFFIX,ip6-localhost
-DOMAIN-SUFFIX,ip6-loopback
 DOMAIN-SUFFIX,lan
-DOMAIN-SUFFIX,leike.cc
 DOMAIN-SUFFIX,local
 DOMAIN-SUFFIX,localdomain
-DOMAIN-SUFFIX,localhost
-DOMAIN-SUFFIX,miwifi.com
-DOMAIN-SUFFIX,my.router
-DOMAIN-SUFFIX,p.to
-DOMAIN-SUFFIX,peiluyou.com
-DOMAIN-SUFFIX,phicomm.me
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,router
-DOMAIN-SUFFIX,router.ctc
 DOMAIN-SUFFIX,routerlogin.com
 DOMAIN-SUFFIX,routerlogin.net
-DOMAIN-SUFFIX,tendawifi.com
 DOMAIN-SUFFIX,tplinkap.net
 DOMAIN-SUFFIX,tplinkmodem.net
 DOMAIN-SUFFIX,tplinkplclogin.net
@@ -67,17 +53,3 @@ DOMAIN-SUFFIX,tplinkrepeater.net
 DOMAIN-SUFFIX,tplinkwifi.net
 DOMAIN-SUFFIX,tplogin.cn
 DOMAIN-SUFFIX,ui.direct
-DOMAIN-SUFFIX,wifi.cmcc
-DOMAIN-SUFFIX,zte.home
-IP-CIDR,0.0.0.0/8
-IP-CIDR,10.0.0.0/8
-IP-CIDR,100.64.0.0/10
-IP-CIDR,127.0.0.0/8
-IP-CIDR,172.16.0.0/12
-IP-CIDR,192.168.0.0/16
-IP-CIDR,198.18.0.0/16
-IP-CIDR,224.0.0.0/4
-IP-CIDR6,::1/128
-IP-CIDR6,fc00::/7
-IP-CIDR6,fd00::/8
-IP-CIDR6,fe80::/10
