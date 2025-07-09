@@ -172,9 +172,9 @@ def process_rule_content(content: str) -> str:
     processed_lines = []
     
     for line in lines:
-        # Comment out Sukka's signature line to avoid syntax errors
+        # Skip Sukka's signature line completely to avoid syntax errors
         if 'th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe' in line:
-            processed_lines.append('# ' + line)
+            continue  # Skip this line entirely
         else:
             processed_lines.append(line)
     

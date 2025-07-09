@@ -7,7 +7,7 @@ import os
 import glob
 
 def test_signature_fix():
-    """Test that all signature lines are properly commented"""
+    """Test that all signature lines are completely removed"""
     issues_found = []
     
     # Find all rule files
@@ -23,8 +23,8 @@ def test_signature_fix():
             
         lines = content.split('\n')
         for line_num, line in enumerate(lines, 1):
-            # Check for uncommented signature lines
-            if 'th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe' in line and not line.strip().startswith('#'):
+            # Check for any signature lines (should be completely removed)
+            if 'th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe' in line:
                 issues_found.append({
                     'file': file_path,
                     'line': line_num,
@@ -32,12 +32,12 @@ def test_signature_fix():
                 })
     
     if issues_found:
-        print(f"❌ Found {len(issues_found)} uncommented signature lines:")
+        print(f"❌ Found {len(issues_found)} signature lines that should be removed:")
         for issue in issues_found:
             print(f"  📁 {issue['file']}:{issue['line']} - {issue['content']}")
         return False
     else:
-        print("✅ All signature lines are properly commented!")
+        print("✅ All signature lines have been completely removed!")
         return True
 
 def get_rule_stats():
