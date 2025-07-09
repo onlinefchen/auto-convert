@@ -265,7 +265,7 @@ class ProxyConverter {
         // General
         lines.push('[General]');
         lines.push('skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local');
-        lines.push('dns-server = 119.29.29.29, 223.5.5.5, system');
+        lines.push('dns-server = https://223.5.5.5/dns-query, https://119.29.29.29/dns-query, https://1.1.1.1/dns-query, system');
         lines.push('loglevel = notify');
         lines.push('internet-test-url = http://www.aliyun.com');
         lines.push('proxy-test-url = http://www.google.com/generate_204');
@@ -436,8 +436,19 @@ class ProxyConverter {
             'external-controller': '127.0.0.1:9090',
             dns: {
                 enable: true,
-                nameserver: ['119.29.29.29', '223.5.5.5'],
-                fallback: ['8.8.8.8', '1.1.1.1']
+                nameserver: [
+                    'https://223.5.5.5/dns-query',
+                    'https://119.29.29.29/dns-query', 
+                    'https://1.1.1.1/dns-query'
+                ],
+                fallback: [
+                    'https://8.8.8.8/dns-query',
+                    'https://1.0.0.1/dns-query'
+                ],
+                'fallback-filter': {
+                    geoip: true,
+                    'geoip-code': 'CN'
+                }
             },
             proxies: [],
             'proxy-groups': [],

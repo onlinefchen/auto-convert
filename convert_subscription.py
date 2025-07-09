@@ -175,7 +175,7 @@ class ConfigGenerator:
         # General settings
         lines.append('[General]')
         lines.append('skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local')
-        lines.append('dns-server = 119.29.29.29, 223.5.5.5, system')
+        lines.append('dns-server = https://223.5.5.5/dns-query, https://119.29.29.29/dns-query, https://1.1.1.1/dns-query, system')
         lines.append('loglevel = notify')
         lines.append('internet-test-url = http://www.aliyun.com')
         lines.append('proxy-test-url = http://www.google.com/generate_204')
@@ -325,13 +325,18 @@ class ConfigGenerator:
             'dns': {
                 'enable': True,
                 'nameserver': [
-                    '119.29.29.29',
-                    '223.5.5.5'
+                    'https://223.5.5.5/dns-query',
+                    'https://119.29.29.29/dns-query', 
+                    'https://1.1.1.1/dns-query'
                 ],
                 'fallback': [
-                    '8.8.8.8',
-                    '1.1.1.1'
-                ]
+                    'https://8.8.8.8/dns-query',
+                    'https://1.0.0.1/dns-query'
+                ],
+                'fallback-filter': {
+                    'geoip': True,
+                    'geoip-code': 'CN'
+                }
             }
         }
         

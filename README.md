@@ -286,13 +286,28 @@ JavaScript 版本：
 - **Ⓜ️ 微软服务** (2个规则) - Microsoft全家桶
 - **🍎 苹果服务** (3个规则) - Apple生态服务
 
-#### 🔧 GitHub访问优化
+#### 🔧 DNS污染防护
 
-针对GitHub访问经常遇到的DNS污染问题，本项目特别优化：
+针对DNS劫持和污染问题，本项目提供双重防护：
 
-- **🎯 优先级规则**：GitHub规则放在LAN规则之前，避免DNS污染导致的0.0.0.0解析
-- **🚀 代理访问**：GitHub相关域名自动通过代理访问，确保稳定性
-- **📦 完整覆盖**：包含github.com、githubusercontent.com、github.io等所有相关域名
+**🛡️ 主要防护 - DoH (DNS over HTTPS)：**
+- **加密DNS查询**：使用HTTPS加密DNS请求，防止中间人攻击
+- **绕过ISP劫持**：避开路由器和ISP的DNS劫持
+- **多重备份**：阿里云DoH + 腾讯云DoH + Cloudflare DoH
+- **自动降级**：DoH失败时自动降级到传统DNS
+
+**🎯 备用防护 - GitHub规则集：**
+- **优先级规则**：GitHub域名规则优先于LAN规则
+- **代理访问**：GitHub相关域名直接通过代理访问
+- **完整覆盖**：包含所有GitHub相关域名作为双重保险
+
+**📊 DNS服务器配置：**
+```
+dns-server = https://223.5.5.5/dns-query,    # 阿里云DoH
+             https://119.29.29.29/dns-query,  # 腾讯云DoH  
+             https://1.1.1.1/dns-query,      # Cloudflare DoH
+             system                          # 系统DNS备用
+```
 
 #### 📈 技术特点
 
