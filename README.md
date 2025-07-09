@@ -279,7 +279,7 @@ JavaScript 版本：
 - **🛑 全球拦截** (7个规则) - 广告、跟踪、钓鱼网站拦截
 - **🍃 应用净化** (1个规则) - 应用内广告净化
 - **🎯 全球直连** (14个规则) - 国内服务、CDN、下载优化
-- **🚀 节点选择** (2个规则) - 国外代理服务、GitHub访问
+- **🚀 节点选择** (1个规则) - 国外代理服务
 - **🤖 人工智能** (1个规则) - AI服务专用
 - **📲 电报消息** (2个规则) - Telegram专用
 - **🎥 流媒体** (8个规则) - 各地区流媒体服务
@@ -288,26 +288,34 @@ JavaScript 版本：
 
 #### 🔧 DNS污染防护
 
-针对DNS劫持和污染问题，本项目提供双重防护：
+使用DoH (DNS over HTTPS) 从根本上解决DNS劫持和污染问题：
 
-**🛡️ 主要防护 - DoH (DNS over HTTPS)：**
+**🛡️ DoH防护特性：**
 - **加密DNS查询**：使用HTTPS加密DNS请求，防止中间人攻击
 - **绕过ISP劫持**：避开路由器和ISP的DNS劫持
 - **多重备份**：阿里云DoH + 腾讯云DoH + Cloudflare DoH
 - **自动降级**：DoH失败时自动降级到传统DNS
-
-**🎯 备用防护 - GitHub规则集：**
-- **优先级规则**：GitHub域名规则优先于LAN规则
-- **代理访问**：GitHub相关域名直接通过代理访问
-- **完整覆盖**：包含所有GitHub相关域名作为双重保险
+- **地理优化**：Clash配置包含GeoIP过滤，优化解析速度
 
 **📊 DNS服务器配置：**
-```
+```bash
+# Surge配置
+# DoH (DNS over HTTPS) 防止DNS污染和劫持
 dns-server = https://223.5.5.5/dns-query,    # 阿里云DoH
              https://119.29.29.29/dns-query,  # 腾讯云DoH  
              https://1.1.1.1/dns-query,      # Cloudflare DoH
              system                          # 系统DNS备用
+
+# Clash配置  
+nameserver: [阿里云DoH, 腾讯云DoH, Cloudflare DoH]
+fallback: [Google DoH, Cloudflare DoH] + GeoIP过滤
 ```
+
+**✅ 解决的问题：**
+- GitHub访问被污染（如raw.githubusercontent.com -> 0.0.0.0）
+- 各种网站DNS解析错误
+- ISP或路由器DNS劫持
+- 网络访问不稳定
 
 #### 📈 技术特点
 
