@@ -220,42 +220,89 @@ class ConfigGenerator:
         base_url = 'https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules'
         
         lines.append('[Rule]')
-        lines.append('# 本地/局域网地址')
-        lines.append(f'RULE-SET,{base_url}/lan.txt,🎯 全球直连')
+        lines.append('# 本地/局域网地址 (DNS解析: 是/否)')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/lan.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/lan.conf,🎯 全球直连')
+        lines.append('')
         
-        lines.append('# 拦截规则')
-        lines.append(f'RULE-SET,{base_url}/reject.txt,🛑 全球拦截')
-        lines.append(f'RULE-SET,{base_url}/reject_app.txt,🍃 应用净化')
+        lines.append('# 拦截规则 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/domainset/reject.conf,🛑 全球拦截')
+        lines.append(f'RULE-SET,{base_url}/surge/domainset/reject_extra.conf,🛑 全球拦截')
+        lines.append(f'RULE-SET,{base_url}/surge/domainset/reject_phishing.conf,🛑 全球拦截')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/reject.conf,🛑 全球拦截')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/reject_drop.conf,🛑 全球拦截')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/reject_no_drop.conf,🍃 应用净化')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/reject.conf,🛑 全球拦截')
+        lines.append('')
         
-        lines.append('# AI服务')
-        lines.append(f'RULE-SET,{base_url}/ai.txt,🤖 人工智能')
+        lines.append('# AI服务 (DNS解析: 否)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/ai.conf,🤖 人工智能')
+        lines.append('')
         
-        lines.append('# 电报')
-        lines.append(f'RULE-SET,{base_url}/telegram.txt,📲 电报消息')
+        lines.append('# 电报消息 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/telegram.conf,📲 电报消息')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/telegram.conf,📲 电报消息')
+        lines.append('')
         
-        lines.append('# 流媒体')
-        lines.append(f'RULE-SET,{base_url}/stream.txt,🎥 流媒体')
+        lines.append('# 流媒体 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream_us.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream_eu.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream_jp.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream_kr.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream_hk.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/stream_tw.conf,🎥 流媒体')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/stream.conf,🎥 流媒体')
+        lines.append('')
         
-        lines.append('# 微软')
-        lines.append(f'RULE-SET,{base_url}/microsoft.txt,Ⓜ️ 微软服务')
+        lines.append('# 微软服务 (DNS解析: 否)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/microsoft.conf,Ⓜ️ 微软服务')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/microsoft_cdn.conf,Ⓜ️ 微软服务')
+        lines.append('')
         
-        lines.append('# 苹果')
-        lines.append(f'RULE-SET,{base_url}/apple.txt,🍎 苹果服务')
+        lines.append('# 苹果服务 (DNS解析: 否)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/apple_services.conf,🍎 苹果服务')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/apple_cn.conf,🍎 苹果服务')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/apple_cdn.conf,🍎 苹果服务')
+        lines.append('')
         
-        lines.append('# 谷歌FCM')
-        lines.append(f'RULE-SET,{base_url}/google_fcm.txt,📢 谷歌FCM')
+        lines.append('# 网易云音乐 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/neteasemusic.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/neteasemusic.conf,🎯 全球直连')
+        lines.append('')
         
-        lines.append('# 游戏平台')
-        lines.append(f'RULE-SET,{base_url}/game.txt,🎮 游戏平台')
+        lines.append('# 隐私保护 (DNS解析: 否)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/sogouinput.conf,🛑 全球拦截')
+        lines.append('')
         
-        lines.append('# 国内域名')
-        lines.append(f'RULE-SET,{base_url}/domestic.txt,🎯 全球直连')
+        lines.append('# CDN优化 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/domainset/cdn.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/cdn.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/cdn.conf,🎯 全球直连')
+        lines.append('')
         
-        lines.append('# 全球加速')
-        lines.append(f'RULE-SET,{base_url}/global.txt,🚀 节点选择')
+        lines.append('# 下载优化 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/domainset/download.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/download.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/download.conf,🎯 全球直连')
+        lines.append('')
         
-        lines.append('# 中国IP')
-        lines.append(f'RULE-SET,{base_url}/china_ip.txt,🎯 全球直连')
+        lines.append('# 国内服务 (DNS解析: 否/是)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/domestic.conf,🎯 全球直连')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/domestic.conf,🎯 全球直连')
+        lines.append('')
+        
+        lines.append('# 全球代理 (DNS解析: 否)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/global.conf,🚀 节点选择')
+        lines.append('')
+        
+        lines.append('# 直连服务 (DNS解析: 否)')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/direct.conf,🎯 全球直连')
+        lines.append('')
+        
+        lines.append('# 中国IP (DNS解析: 是)')
+        lines.append(f'RULE-SET,{base_url}/surge/ip/china_ip.conf,🎯 全球直连')
+        lines.append('')
         
         lines.append('# Final')
         lines.append('FINAL,🐟 漏网之鱼')
@@ -376,94 +423,305 @@ class ConfigGenerator:
         base_url = 'https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules'
         
         config['rule-providers'] = {
-            'lan': {
+            # 局域网规则 (non_ip/ip)
+            'lan_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/lan.txt',
-                'path': './ruleset/lan.yaml',
+                'url': f'{base_url}/clash/ip/lan.txt',
+                'path': './ruleset/lan_ip.yaml',
                 'interval': 86400
             },
-            'reject': {
+            'lan_non_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/reject.txt',
-                'path': './ruleset/reject.yaml',
+                'url': f'{base_url}/clash/non_ip/lan.txt',
+                'path': './ruleset/lan_non_ip.yaml',
                 'interval': 86400
             },
-            'reject_app': {
+            
+            # 拦截规则 (domainset/non_ip/ip)
+            'reject_domainset': {
+                'type': 'http',
+                'behavior': 'domain',
+                'url': f'{base_url}/clash/domainset/reject.txt',
+                'path': './ruleset/reject_domainset.yaml',
+                'interval': 86400
+            },
+            'reject_extra': {
+                'type': 'http',
+                'behavior': 'domain',
+                'url': f'{base_url}/clash/domainset/reject_extra.txt',
+                'path': './ruleset/reject_extra.yaml',
+                'interval': 86400
+            },
+            'reject_phishing': {
+                'type': 'http',
+                'behavior': 'domain',
+                'url': f'{base_url}/clash/domainset/reject_phishing.txt',
+                'path': './ruleset/reject_phishing.yaml',
+                'interval': 86400
+            },
+            'reject_non_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/reject_app.txt',
-                'path': './ruleset/reject_app.yaml',
+                'url': f'{base_url}/clash/non_ip/reject.txt',
+                'path': './ruleset/reject_non_ip.yaml',
                 'interval': 86400
             },
+            'reject_drop': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/reject_drop.txt',
+                'path': './ruleset/reject_drop.yaml',
+                'interval': 86400
+            },
+            'reject_no_drop': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/reject_no_drop.txt',
+                'path': './ruleset/reject_no_drop.yaml',
+                'interval': 86400
+            },
+            'reject_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/ip/reject.txt',
+                'path': './ruleset/reject_ip.yaml',
+                'interval': 86400
+            },
+            
+            # AI服务
             'ai': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/ai.txt',
+                'url': f'{base_url}/clash/non_ip/ai.txt',
                 'path': './ruleset/ai.yaml',
                 'interval': 86400
             },
-            'telegram': {
+            
+            # 电报消息
+            'telegram_non_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/telegram.txt',
-                'path': './ruleset/telegram.yaml',
+                'url': f'{base_url}/clash/non_ip/telegram.txt',
+                'path': './ruleset/telegram_non_ip.yaml',
                 'interval': 86400
             },
-            'stream': {
+            'telegram_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/stream.txt',
-                'path': './ruleset/stream.yaml',
+                'url': f'{base_url}/clash/ip/telegram.txt',
+                'path': './ruleset/telegram_ip.yaml',
                 'interval': 86400
             },
-            'microsoft': {
+            
+            # 流媒体服务
+            'stream_non_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/microsoft.txt',
-                'path': './ruleset/microsoft.yaml',
+                'url': f'{base_url}/clash/non_ip/stream.txt',
+                'path': './ruleset/stream_non_ip.yaml',
                 'interval': 86400
             },
-            'apple': {
+            'stream_us': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/apple.txt',
-                'path': './ruleset/apple.yaml',
+                'url': f'{base_url}/clash/non_ip/stream_us.txt',
+                'path': './ruleset/stream_us.yaml',
                 'interval': 86400
             },
-            'google_fcm': {
+            'stream_eu': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/google_fcm.txt',
-                'path': './ruleset/google_fcm.yaml',
+                'url': f'{base_url}/clash/non_ip/stream_eu.txt',
+                'path': './ruleset/stream_eu.yaml',
                 'interval': 86400
             },
-            'game': {
+            'stream_jp': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/game.txt',
-                'path': './ruleset/game.yaml',
+                'url': f'{base_url}/clash/non_ip/stream_jp.txt',
+                'path': './ruleset/stream_jp.yaml',
                 'interval': 86400
             },
+            'stream_kr': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/stream_kr.txt',
+                'path': './ruleset/stream_kr.yaml',
+                'interval': 86400
+            },
+            'stream_hk': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/stream_hk.txt',
+                'path': './ruleset/stream_hk.yaml',
+                'interval': 86400
+            },
+            'stream_tw': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/stream_tw.txt',
+                'path': './ruleset/stream_tw.yaml',
+                'interval': 86400
+            },
+            'stream_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/ip/stream.txt',
+                'path': './ruleset/stream_ip.yaml',
+                'interval': 86400
+            },
+            
+            # 微软服务
+            'microsoft_non_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/microsoft.txt',
+                'path': './ruleset/microsoft_non_ip.yaml',
+                'interval': 86400
+            },
+            'microsoft_cdn': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/microsoft_cdn.txt',
+                'path': './ruleset/microsoft_cdn.yaml',
+                'interval': 86400
+            },
+            
+            # 苹果服务
+            'apple_services': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/apple_services.txt',
+                'path': './ruleset/apple_services.yaml',
+                'interval': 86400
+            },
+            'apple_cn': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/apple_cn.txt',
+                'path': './ruleset/apple_cn.yaml',
+                'interval': 86400
+            },
+            'apple_cdn': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/apple_cdn.txt',
+                'path': './ruleset/apple_cdn.yaml',
+                'interval': 86400
+            },
+            
+            # 网易云音乐
+            'neteasemusic_non_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/neteasemusic.txt',
+                'path': './ruleset/neteasemusic_non_ip.yaml',
+                'interval': 86400
+            },
+            'neteasemusic_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/ip/neteasemusic.txt',
+                'path': './ruleset/neteasemusic_ip.yaml',
+                'interval': 86400
+            },
+            
+            # 隐私保护
+            'sogouinput': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/sogouinput.txt',
+                'path': './ruleset/sogouinput.yaml',
+                'interval': 86400
+            },
+            
+            # CDN优化
+            'cdn_domainset': {
+                'type': 'http',
+                'behavior': 'domain',
+                'url': f'{base_url}/clash/domainset/cdn.txt',
+                'path': './ruleset/cdn_domainset.yaml',
+                'interval': 86400
+            },
+            'cdn_non_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/cdn.txt',
+                'path': './ruleset/cdn_non_ip.yaml',
+                'interval': 86400
+            },
+            'cdn_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/ip/cdn.txt',
+                'path': './ruleset/cdn_ip.yaml',
+                'interval': 86400
+            },
+            
+            # 下载优化
+            'download_domainset': {
+                'type': 'http',
+                'behavior': 'domain',
+                'url': f'{base_url}/clash/domainset/download.txt',
+                'path': './ruleset/download_domainset.yaml',
+                'interval': 86400
+            },
+            'download_non_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/download.txt',
+                'path': './ruleset/download_non_ip.yaml',
+                'interval': 86400
+            },
+            'download_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/ip/download.txt',
+                'path': './ruleset/download_ip.yaml',
+                'interval': 86400
+            },
+            
+            # 国内服务
+            'domestic_non_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/domestic.txt',
+                'path': './ruleset/domestic_non_ip.yaml',
+                'interval': 86400
+            },
+            'domestic_ip': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/ip/domestic.txt',
+                'path': './ruleset/domestic_ip.yaml',
+                'interval': 86400
+            },
+            
+            # 全球代理
             'global': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/global.txt',
+                'url': f'{base_url}/clash/non_ip/global.txt',
                 'path': './ruleset/global.yaml',
                 'interval': 86400
             },
-            'domestic': {
+            
+            # 直连服务
+            'direct': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/domestic.txt',
-                'path': './ruleset/domestic.yaml',
+                'url': f'{base_url}/clash/non_ip/direct.txt',
+                'path': './ruleset/direct.yaml',
                 'interval': 86400
             },
+            
+            # 中国IP
             'china_ip': {
                 'type': 'http',
                 'behavior': 'classical',
-                'url': f'{base_url}/china_ip.txt',
+                'url': f'{base_url}/clash/ip/china_ip.txt',
                 'path': './ruleset/china_ip.yaml',
                 'interval': 86400
             }
@@ -471,50 +729,82 @@ class ConfigGenerator:
         
         # Rules
         config['rules'] = [
-            # 本地/局域网地址
-            'RULE-SET,lan,🎯 全球直连',
+            # 局域网规则
+            'RULE-SET,lan_ip,🎯 全球直连',
+            'RULE-SET,lan_non_ip,🎯 全球直连',
             
-            # 拦截规则
-            'RULE-SET,reject,🛑 全球拦截',
-            'RULE-SET,reject_app,🍃 应用净化',
+            # 拦截规则 (按DNS解析性能优化排序)
+            'RULE-SET,reject_domainset,🛑 全球拦截',
+            'RULE-SET,reject_extra,🛑 全球拦截',
+            'RULE-SET,reject_phishing,🛑 全球拦截',
+            'RULE-SET,reject_non_ip,🛑 全球拦截',
+            'RULE-SET,reject_drop,🛑 全球拦截',
+            'RULE-SET,reject_no_drop,🍃 应用净化',
+            'RULE-SET,reject_ip,🛑 全球拦截',
             
             # AI服务
             'RULE-SET,ai,🤖 人工智能',
             
-            # 电报
-            'RULE-SET,telegram,📲 电报消息',
+            # 电报消息
+            'RULE-SET,telegram_non_ip,📲 电报消息',
+            'RULE-SET,telegram_ip,📲 电报消息',
             
-            # 流媒体
-            'RULE-SET,stream,🎥 流媒体',
+            # 流媒体服务
+            'RULE-SET,stream_non_ip,🎥 流媒体',
+            'RULE-SET,stream_us,🎥 流媒体',
+            'RULE-SET,stream_eu,🎥 流媒体',
+            'RULE-SET,stream_jp,🎥 流媒体',
+            'RULE-SET,stream_kr,🎥 流媒体',
+            'RULE-SET,stream_hk,🎥 流媒体',
+            'RULE-SET,stream_tw,🎥 流媒体',
+            'RULE-SET,stream_ip,🎥 流媒体',
             
-            # 微软
-            'RULE-SET,microsoft,Ⓜ️ 微软服务',
+            # 微软服务
+            'RULE-SET,microsoft_non_ip,Ⓜ️ 微软服务',
+            'RULE-SET,microsoft_cdn,Ⓜ️ 微软服务',
             
-            # 苹果
-            'RULE-SET,apple,🍎 苹果服务',
+            # 苹果服务
+            'RULE-SET,apple_services,🍎 苹果服务',
+            'RULE-SET,apple_cn,🍎 苹果服务',
+            'RULE-SET,apple_cdn,🍎 苹果服务',
             
-            # 谷歌FCM
-            'RULE-SET,google_fcm,📢 谷歌FCM',
+            # 网易云音乐
+            'RULE-SET,neteasemusic_non_ip,🎯 全球直连',
+            'RULE-SET,neteasemusic_ip,🎯 全球直连',
             
-            # 游戏平台
-            'RULE-SET,game,🎮 游戏平台',
+            # 隐私保护
+            'RULE-SET,sogouinput,🛑 全球拦截',
             
-            # 国内域名
-            'RULE-SET,domestic,🎯 全球直连',
+            # CDN优化
+            'RULE-SET,cdn_domainset,🎯 全球直连',
+            'RULE-SET,cdn_non_ip,🎯 全球直连',
+            'RULE-SET,cdn_ip,🎯 全球直连',
             
-            # 全球加速
+            # 下载优化
+            'RULE-SET,download_domainset,🎯 全球直连',
+            'RULE-SET,download_non_ip,🎯 全球直连',
+            'RULE-SET,download_ip,🎯 全球直连',
+            
+            # 国内服务
+            'RULE-SET,domestic_non_ip,🎯 全球直连',
+            'RULE-SET,domestic_ip,🎯 全球直连',
+            
+            # 全球代理
             'RULE-SET,global,🚀 节点选择',
+            
+            # 直连服务
+            'RULE-SET,direct,🎯 全球直连',
             
             # 中国IP
             'RULE-SET,china_ip,🎯 全球直连',
             
-            # LAN IP
+            # 私有IP段
             'IP-CIDR,192.168.0.0/16,🎯 全球直连',
             'IP-CIDR,10.0.0.0/8,🎯 全球直连',
             'IP-CIDR,172.16.0.0/12,🎯 全球直连',
             'IP-CIDR,127.0.0.0/8,🎯 全球直连',
             
-            # Final
+            # 最终规则
             'MATCH,🐟 漏网之鱼'
         ]
         
