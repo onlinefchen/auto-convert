@@ -302,6 +302,10 @@ class ProxyConverter {
         // Rules (按DNS解析行为组织)
         lines.push('[Rule]');
         
+        // GitHub服务 (DNS解析: 否) - 优先处理避免DNS污染
+        lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/non_ip/github.conf,🚀 节点选择');
+        lines.push('');
+        
         // 本地/局域网地址 (DNS解析: 是/否)
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/ip/lan.conf,🎯 全球直连');
         lines.push('RULE-SET,https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/surge/non_ip/lan.conf,🎯 全球直连');
@@ -512,6 +516,15 @@ class ProxyConverter {
         
         // Rule-providers配置(按DNS解析行为组织)
         config['rule-providers'] = {
+            // GitHub服务 (DNS解析: 否) - 避免DNS污染
+            'github': {
+                type: 'http',
+                behavior: 'classical',
+                url: 'https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules/clash/non_ip/github.txt',
+                path: './rules/github.yaml',
+                interval: 43200
+            },
+            
             // 本地/局域网地址 (DNS解析: 是/否)
             'lan_ip': {
                 type: 'http',
@@ -818,6 +831,9 @@ class ProxyConverter {
         
         // Rules (按DNS解析行为优化的完整规则集)
         config.rules = [
+            // GitHub服务 (优先处理避免DNS污染)
+            'RULE-SET,github,🚀 节点选择',
+            
             // 本地/局域网地址 (DNS解析: 是/否)
             'RULE-SET,lan_ip,🎯 全球直连',
             'RULE-SET,lan_non_ip,🎯 全球直连',

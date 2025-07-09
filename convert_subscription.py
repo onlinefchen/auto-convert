@@ -220,6 +220,10 @@ class ConfigGenerator:
         base_url = 'https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules'
         
         lines.append('[Rule]')
+        lines.append('# GitHub服务 (DNS解析: 否) - 优先处理避免DNS污染')
+        lines.append(f'RULE-SET,{base_url}/surge/non_ip/github.conf,🚀 节点选择')
+        lines.append('')
+        
         lines.append('# 本地/局域网地址 (DNS解析: 是/否)')
         lines.append(f'RULE-SET,{base_url}/surge/ip/lan.conf,🎯 全球直连')
         lines.append(f'RULE-SET,{base_url}/surge/non_ip/lan.conf,🎯 全球直连')
@@ -423,6 +427,15 @@ class ConfigGenerator:
         base_url = 'https://raw.githubusercontent.com/onlinefchen/auto-convert/main/rules'
         
         config['rule-providers'] = {
+            # GitHub服务 (non_ip) - 避免DNS污染
+            'github': {
+                'type': 'http',
+                'behavior': 'classical',
+                'url': f'{base_url}/clash/non_ip/github.txt',
+                'path': './ruleset/github.yaml',
+                'interval': 86400
+            },
+            
             # 局域网规则 (non_ip/ip)
             'lan_ip': {
                 'type': 'http',
@@ -729,6 +742,9 @@ class ConfigGenerator:
         
         # Rules
         config['rules'] = [
+            # GitHub服务 (优先处理避免DNS污染)
+            'RULE-SET,github,🚀 节点选择',
+            
             # 局域网规则
             'RULE-SET,lan_ip,🎯 全球直连',
             'RULE-SET,lan_non_ip,🎯 全球直连',
