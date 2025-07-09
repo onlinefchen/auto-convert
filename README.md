@@ -2,11 +2,17 @@
 
 🚀 一键将代理订阅链接转换为 Surge 和 Clash 配置文件的 Python 工具
 
+[![Update Rules](https://github.com/onlinefchen/auto-convert/actions/workflows/update-rules.yml/badge.svg)](https://github.com/onlinefchen/auto-convert/actions/workflows/update-rules.yml)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Rules](https://img.shields.io/badge/rules-78_files-green.svg)](https://github.com/onlinefchen/auto-convert/tree/main/rules)
+[![Sukka](https://img.shields.io/badge/powered_by-Sukka's_Ruleset-orange.svg)](https://ruleset.skk.moe/)
+
 ## ✨ 功能特性
 
 - **多协议支持**: VMess、Shadowsocks、Trojan
-- **智能分组**: AI服务、流媒体、游戏、微软、苹果等专用分组
-- **高质量规则**: 集成 Sukka 和 ACL4SSR 规则集
+- **智能分组**: AI服务、流媒体、微软、苹果等专用分组
+- **高质量规则**: 基于 Sukka 理念的 DNS 解析优化规则集
+- **性能优化**: 三层规则分类，减少DNS查询提升速度
 - **一键运行**: 自动环境配置，零配置使用
 - **二维码生成**: 上传到私有 GitHub Gist，扫码即用
 - **跨平台**: 支持 Windows、macOS、Linux
@@ -227,19 +233,87 @@ JavaScript 版本：
 生成的配置包含以下专用分组，每个分组可选择所有节点：
 
 - 🤖 **人工智能** - ChatGPT、Claude、Gemini 等 AI 服务
-- 📲 **电报消息** - Telegram 专用
-- 🎥 **流媒体** - Netflix、YouTube、Disney+ 等
-- 🎮 **游戏平台** - Steam、Epic Games 等
-- Ⓜ️ **微软服务** - Microsoft 全家桶
-- 🍎 **苹果服务** - iCloud、App Store 等
-- 📢 **谷歌FCM** - 推送通知服务
+- 📲 **电报消息** - Telegram 专用优化
+- 🎥 **流媒体** - Netflix、YouTube、Disney+ 等全球流媒体
+  - 🇺🇸 美国流媒体 - Netflix US、Hulu 等
+  - 🇪🇺 欧洲流媒体 - 欧洲本地服务
+  - 🇯🇵 日本流媒体 - AbemaTV、TVer 等
+  - 🇰🇷 韩国流媒体 - 韩国本地服务
+  - 🇭🇰 香港流媒体 - 香港本地服务
+  - 🇹🇼 台湾流媒体 - 台湾本地服务
+- Ⓜ️ **微软服务** - Microsoft 全家桶及 CDN 优化
+- 🍎 **苹果服务** - iCloud、App Store 等完整生态
+- 🛑 **全球拦截** - 广告、跟踪、钓鱼网站拦截
+- 🍃 **应用净化** - 应用内广告轻量拦截
+- 🎯 **全球直连** - 国内服务、CDN、下载优化
 
 ## 🛡️ 规则特性
 
-- **广告拦截**: 自动屏蔽广告和跟踪
-- **应用净化**: 净化应用内广告
-- **智能分流**: 国内直连，国外代理
-- **自动更新**: 规则集每日自动更新
+### 📊 基于 Sukka 理念的 DNS 解析优化
+
+本项目采用 [Sukka](https://github.com/SukkaW/Surge) 的三层规则分类理念，按DNS解析行为组织规则，优化代理性能：
+
+#### 🎯 三层规则分类
+
+1. **domainset/** - 纯域名规则（DNS解析：否）
+   - 不触发DNS解析，最快匹配
+   - 适用于明确域名的拦截和分流
+
+2. **non_ip/** - 非IP规则（DNS解析：否）
+   - 域名和正则表达式规则
+   - 不触发DNS解析，性能优异
+
+3. **ip/** - IP规则（DNS解析：是）
+   - 需要DNS解析的IP段规则
+   - 精确匹配，但会触发DNS查询
+
+#### 🚀 性能优化
+
+- **规则顺序优化**: 按DNS解析成本排序，优先匹配无需解析的规则
+- **完整规则覆盖**: 包含所有39个Sukka规则集，无遗漏
+- **智能分组**: 根据服务类型和DNS解析行为合理分组
+- **格式分离**: Surge和Clash规则完全分离，避免混用
+
+#### 📋 规则分组详情
+
+- **🛑 全球拦截** (7个规则) - 广告、跟踪、钓鱼网站拦截
+- **🍃 应用净化** (1个规则) - 应用内广告净化
+- **🎯 全球直连** (14个规则) - 国内服务、CDN、下载优化
+- **🚀 节点选择** (1个规则) - 国外代理服务
+- **🤖 人工智能** (1个规则) - AI服务专用
+- **📲 电报消息** (2个规则) - Telegram专用
+- **🎥 流媒体** (8个规则) - 各地区流媒体服务
+- **Ⓜ️ 微软服务** (2个规则) - Microsoft全家桶
+- **🍎 苹果服务** (3个规则) - Apple生态服务
+
+#### 📈 技术特点
+
+- **自动更新**: 规则集每日自动更新（GitHub Actions）
+- **DNS解析优化**: 减少不必要的DNS查询
+- **行为分析**: 基于流量特征智能分流
+- **兼容性**: 支持最新的Surge和Clash特性
+- **质量保证**: 自动修复格式问题，确保规则语法正确
+
+#### 🤖 自动化更新
+
+本项目使用GitHub Actions实现全自动规则更新：
+
+- **⏰ 定时更新**: 每日北京时间 08:00 自动更新
+- **📥 智能下载**: 自动获取最新的Sukka规则集
+- **🔧 自动修复**: 自动处理格式问题和语法错误
+- **📦 自动发布**: 更新后自动创建Release版本
+- **🔍 变更检测**: 仅在规则有变化时才提交更新
+
+#### 🛠️ 规则维护
+
+手动更新规则（开发者）：
+```bash
+# 下载最新规则
+python3 download_rules.py
+
+# 测试规则完整性
+python3 test_auto_fix.py
+```
 
 ## 📄 输出文件
 
@@ -260,5 +334,21 @@ MIT License
 
 ## 🙏 致谢
 
-- [Sukka](https://github.com/SukkaW/Surge) - 高质量规则集
-- [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) - 分流规则
+- [Sukka](https://github.com/SukkaW/Surge) - 高质量规则集及DNS解析优化理念
+- [Sukka's Ruleset](https://ruleset.skk.moe/) - 完整的39个规则集数据源
+- [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) - 分流规则参考
+
+## 📊 规则统计
+
+本项目包含完整的 39 个 Sukka 规则集：
+
+### domainset/ (5个规则)
+- cdn, download, reject, reject_extra, reject_phishing
+
+### non_ip/ (25个规则)  
+- ai, apple_cdn, apple_cn, apple_services, cdn, direct, domestic, download, global, lan, microsoft, microsoft_cdn, neteasemusic, reject, reject_drop, reject_no_drop, sogouinput, stream, stream_eu, stream_hk, stream_jp, stream_kr, stream_tw, stream_us, telegram
+
+### ip/ (9个规则)
+- cdn, china_ip, domestic, download, lan, neteasemusic, reject, stream, telegram
+
+**总计: 39个规则文件 × 2种格式 = 78个规则文件**

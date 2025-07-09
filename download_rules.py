@@ -166,6 +166,39 @@ SUKKA_CLASH_RULES = {
     }
 }
 
+def process_rule_content(content: str) -> str:
+    """Process rule content to fix formatting issues"""
+    lines = content.split('\n')
+    processed_lines = []
+    
+    for line in lines:
+        # Comment out Sukka's signature line to avoid syntax errors
+        if 'th1s_rule5et_1s_m4d3_by_5ukk4w_ruleset.skk.moe' in line:
+            processed_lines.append('# ' + line)
+        else:
+            processed_lines.append(line)
+    
+    return '\n'.join(processed_lines)
+
+def ensure_directories():
+    """Ensure all required directories exist"""
+    for format_type in ['surge', 'clash']:
+        for category in ['domainset', 'non_ip', 'ip']:
+            os.makedirs(f'rules/{format_type}/{category}', exist_ok=True)
+
+def get_rule_stats(content: str) -> dict:
+    """Get statistics about the rules"""
+    lines = content.split('\n')
+    total_lines = len(lines)
+    comment_lines = len([line for line in lines if line.strip().startswith('#')])
+    rule_lines = len([line for line in lines if line.strip() and not line.startswith('#')])
+    
+    return {
+        'total_lines': total_lines,
+        'comment_lines': comment_lines,
+        'rule_lines': rule_lines
+    }
+
 def download_file(url: str, max_retries: int = 3) -> str:
     """Download content from URL with retry"""
     for i in range(max_retries):
@@ -186,11 +219,12 @@ def create_rule_files():
     """Download Sukka's rule sets organized by DNS resolution behavior"""
     
     # Create directory structure following ref-list philosophy
-    for format_name in ['surge', 'clash']:
-        for category in ['domainset', 'non_ip', 'ip']:
-            os.makedirs(f'rules/{format_name}/{category}', exist_ok=True)
+    ensure_directories()
     
     print("📥 Starting Sukka rule sets download (organized by DNS resolution behavior)...")
+    print(f"📅 Started at: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🌐 Source: https://ruleset.skk.moe/")
+    print(f"📊 Total rule-sets: {len(SUKKA_SURGE_RULES['domainset']) + len(SUKKA_SURGE_RULES['non_ip']) + len(SUKKA_SURGE_RULES['ip'])}")
     
     # Download Surge rules
     print("\n🔄 Downloading Surge rules...")
@@ -208,6 +242,9 @@ def create_rule_files():
                 failed_surge.append(f"{category}/{rule_name}")
                 continue
             
+            # Process content to fix formatting issues
+            content = process_rule_content(content)
+            
             # Add header with category information
             header = f"""# {rule_name.upper()} Rules (SURGE)
 # Category: {category}
@@ -222,9 +259,9 @@ def create_rule_files():
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(header + content)
             
-            rule_count = len([line for line in content.split('\n') if line.strip() and not line.startswith('#')])
-            total_surge_rules += rule_count
-            print(f"      ✅ Created {filepath} ({rule_count} rules)")
+            stats = get_rule_stats(content)
+            total_surge_rules += stats['rule_lines']
+            print(f"      ✅ Created {filepath} ({stats['rule_lines']} rules, {stats['total_lines']} total lines)")
     
     # Download Clash rules
     print("\n🔄 Downloading Clash rules...")
@@ -242,6 +279,9 @@ def create_rule_files():
                 failed_clash.append(f"{category}/{rule_name}")
                 continue
             
+            # Process content to fix formatting issues
+            content = process_rule_content(content)
+            
             # Add header with category information
             header = f"""# {rule_name.upper()} Rules (CLASH)
 # Category: {category}
@@ -256,9 +296,9 @@ def create_rule_files():
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(header + content)
             
-            rule_count = len([line for line in content.split('\n') if line.strip() and not line.startswith('#')])
-            total_clash_rules += rule_count
-            print(f"      ✅ Created {filepath} ({rule_count} rules)")
+            stats = get_rule_stats(content)
+            total_clash_rules += stats['rule_lines']
+            print(f"      ✅ Created {filepath} ({stats['rule_lines']} rules, {stats['total_lines']} total lines)")
     
     print(f"\n🎉 Rule sets download completed!")
     print(f"📊 Statistics:")
