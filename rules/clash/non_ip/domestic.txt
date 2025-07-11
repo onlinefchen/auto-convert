@@ -1,13 +1,13 @@
 # DOMESTIC Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-10 00:28:06
+# Generated at 2025-07-11 00:28:17
 # Source: https://ruleset.skk.moe/Clash/non_ip/domestic.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Domestic Domains
-# Last Updated: 2025-06-23T15:23:00.241Z
-# Size: 799
+# Last Updated: 2025-07-10T15:33:45.359Z
+# Size: 802
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -174,6 +174,7 @@ DOMAIN-SUFFIX,bytednsdoc.com
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,bilicomics.com
 DOMAIN-SUFFIX,alibabadns.com
+DOMAIN-SUFFIX,4008823823.com
 DOMAIN-SUFFIX,zuoyebang.com
 DOMAIN-SUFFIX,youzanyun.com
 DOMAIN-SUFFIX,yangkeduo.com
@@ -543,6 +544,7 @@ DOMAIN-SUFFIX,iqiyi.com
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,iciba.com
+DOMAIN-SUFFIX,hwwt8.com
 DOMAIN-SUFFIX,huxiu.com
 DOMAIN-SUFFIX,honor.com
 DOMAIN-SUFFIX,hdslb.com
@@ -726,6 +728,7 @@ DOMAIN-SUFFIX,pplive.cn
 DOMAIN-SUFFIX,neixin.cn
 DOMAIN-SUFFIX,mybank.cn
 DOMAIN-SUFFIX,mifile.cn
+DOMAIN-SUFFIX,kfcapp.cn
 DOMAIN-SUFFIX,ipanda.cn
 DOMAIN-SUFFIX,hwccpc.cn
 DOMAIN-SUFFIX,huawei.cn
