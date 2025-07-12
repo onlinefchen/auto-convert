@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-11 00:28:18
+# Generated at 2025-07-12 00:27:59
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-07-02T12:48:37.424Z
-# Size: 678
+# Last Updated: 2025-07-11T09:39:13.845Z
+# Size: 677
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -476,7 +476,6 @@ DOMAIN-REGEX,^customerevents\.us-east-[\w.-]*?\.internal\.dradis\.netflix\.com$
 DOMAIN-REGEX,^cs[\w.-]*?\.mp3bars\.com$
 DOMAIN-REGEX,^dn[\w.-]*?\.ixinwei\.com$
 DOMAIN-REGEX,^ana[\w.-]*?\.inews24\.com$
-DOMAIN-REGEX,^events-[\w.-]*?\.op\.hicloud\.com$
 DOMAIN-REGEX,^ulog[\w.-]*?\.gifshow\.com$
 DOMAIN-REGEX,^mon[\w.-]*?-misc-lf\.fqnovel\.com$
 DOMAIN-REGEX,^mon[\w.-]*?-misc\.fqnovel\.com$
