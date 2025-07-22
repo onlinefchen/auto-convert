@@ -1,19 +1,20 @@
 # GLOBAL Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-21 00:31:25
+# Generated at 2025-07-22 00:29:17
 # Source: https://ruleset.skk.moe/Clash/non_ip/global.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - General Global Services
-# Last Updated: 2025-07-20T16:47:24.767Z
-# Size: 1081
+# Last Updated: 2025-07-21T09:52:52.367Z
+# Size: 1082
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
 #
 # This file contains rules for services that are not available inside the Mainland China.
 #########################################
+DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 DOMAIN-SUFFIX,community
 DOMAIN-SUFFIX,network
 DOMAIN-SUFFIX,x.company
@@ -562,6 +563,7 @@ DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xgroovy.com
 DOMAIN-SUFFIX,xfinity.com
 DOMAIN-SUFFIX,workday.com
+DOMAIN-SUFFIX,wikihow.com
 DOMAIN-SUFFIX,wikidot.com
 DOMAIN-SUFFIX,webflow.com
 DOMAIN-SUFFIX,weather.com

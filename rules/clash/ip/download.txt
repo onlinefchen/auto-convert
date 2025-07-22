@@ -1,12 +1,12 @@
 # DOWNLOAD Rules (CLASH)
 # Category: ip
-# Generated at 2025-07-21 00:31:27
+# Generated at 2025-07-22 00:29:20
 # Source: https://ruleset.skk.moe/Clash/ip/download.txt
 # DNS Resolution: Yes
 
 #########################################
 # Sukka's Ruleset - Large Files Hosting IPs
-# Last Updated: 2025-06-21T07:43:06.764Z
+# Last Updated: 2025-07-21T08:09:50.373Z
 # Size: 12
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -14,6 +14,7 @@
 #
 # This file contains IPs for software updating & large file hosting.
 #########################################
+DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 IP-CIDR,66.203.126.0/23,no-resolve
 IP-CIDR,94.24.36.0/23,no-resolve
 IP-CIDR,162.208.16.0/24,no-resolve

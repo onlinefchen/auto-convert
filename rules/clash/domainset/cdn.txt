@@ -1,19 +1,20 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-07-21 00:31:24
+# Generated at 2025-07-22 00:29:15
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-07-11T11:31:43.584Z
-# Size: 3695
+# Last Updated: 2025-07-21T15:51:53.681Z
+# Size: 3697
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
 #
 # This file contains object storage and static assets CDN domains.
 #########################################
+7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 +.static.microsoft
 cdn.arcade.software
 media.infosec.exchange
@@ -135,7 +136,6 @@ cimg.cnyes.cool
 cdn.kinopio.club
 storage.crisp.chat
 image.crisp.chat
-+.ipfs.drink.cafe
 assets.toot.cafe
 avatars.micro.blog
 cdn.micro.blog
@@ -296,6 +296,7 @@ demotiles.maplibre.org
 api.indexnow.org
 assets.exercism.org
 david-dm.org
+design.codeberg.org
 fonts.codeberg.org
 static.aizanmei.org
 +.ziglang.org
@@ -740,6 +741,7 @@ img.skk.moe
 objects.hit.moe
 +.cloudflare.ltd
 static.coinall.ltd
+image.acg.lol
 cdn.cbd.int
 +.cthd.icu
 images-assets.nasa.gov
@@ -959,6 +961,7 @@ js.verygoodvault.com
 +.transcend-cdn.com
 +.bundle.thimatic-apps.com
 cdn.stellarhosted.com
++.steemitimages.com
 assets.static-upwork.com
 +.slidesharecdn.com
 cdn.sitesearch360.com
@@ -1137,7 +1140,6 @@ widgets.zohosalesiq.com
 images.youracclaim.com
 bookface-static.ycombinator.com
 +.xvideos-cdn.com
-img2.xiangbinjun.com
 storage.windiscover.com
 +.webpkgcache.com
 static.webclicks24.com
@@ -1439,6 +1441,7 @@ w2.influxdata.com
 jssocdn.indiatimes.com
 +.imgikuncdn.com
 cdn-thumbs.imagevenue.com
++.imagetwist.com
 imagizer.imageshack.com
 cdn5.iconfinder.com
 cdn4.iconfinder.com
@@ -3139,7 +3142,6 @@ assets-cdn.jable.tv
 assetscdn.jable.tv
 assets.jable.tv
 i.iwara.tv
-+.7mmtv.tv
 cdn.18jav.tv
 s-cdnstatic.svc.litv.tv
 p-cdnstatic.svc.litv.tv
@@ -3539,6 +3541,7 @@ static.snaptube.in
 +.cdn.imgeng.in
 object.innei.in
 +.cloudfront.net.in
++.yygimg.im
 assets.monica.im
 img.majors.im
 badges.gitter.im

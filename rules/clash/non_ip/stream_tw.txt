@@ -1,12 +1,12 @@
 # STREAM_TW Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-21 00:31:26
+# Generated at 2025-07-22 00:29:18
 # Source: https://ruleset.skk.moe/Clash/non_ip/stream_tw.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Stream Services: Taiwan
-# Last Updated: 2025-06-21T07:43:06.491Z
+# Last Updated: 2025-07-21T08:09:50.065Z
 # Size: 28
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -19,6 +19,7 @@
 # - HBO Asia
 # - Bahamut
 #########################################
+DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 DOMAIN-SUFFIX,kk.stream
 DOMAIN,d3c7rimkq79yfu.cloudfront.net
 DOMAIN,players.brightcove.net

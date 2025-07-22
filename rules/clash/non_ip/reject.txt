@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-21 00:31:26
+# Generated at 2025-07-22 00:29:19
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-07-18T12:52:15.214Z
-# Size: 682
+# Last Updated: 2025-07-21T15:51:51.815Z
+# Size: 687
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -15,7 +15,31 @@
 # The ruleset supports AD blocking, tracking protection, privacy protection, anti-phishing, anti-mining
 #
 # The file contains wildcard domains from data source mentioned in /domainset/reject file
+#
+# This file contains data from:
+#   - https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+#   - https://cdn.jsdelivr.net/gh/DandelionSprout/adfilt@master/GameConsoleAdblockList.txt
+#   - https://cdn.jsdelivr.net/gh/hoshsadiq/adblock-nocoin-list@master/nocoin.txt
+#   - https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+#   - https://easylist.to/easylist/easyprivacy.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/224_optimized.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/250_optimized.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/3_optimized.txt
+#   - https://filters.adtidy.org/extension/ublock/filters/7_optimized.txt
+#   - https://ublockorigin.github.io/uAssets/thirdparties/easylist-cookies.txt
+#   - https://ublockorigin.github.io/uAssets/thirdparties/easylist-notifications.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/filters/annoyances.min.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/filters/badware.min.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/filters/filters.min.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/filters/privacy.min.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/filters/unbreak.min.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/thirdparties/easylist-annoyances.txt
+#   - https://ublockorigin.github.io/uAssetsCDN/thirdparties/easylist-newsletters.txt
 #########################################
+DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 DOMAIN-SUFFIX,data
 DOMAIN-SUFFIX,httpdns.pro
 DOMAIN-SUFFIX,holashop.org
@@ -240,6 +264,7 @@ DOMAIN-KEYWORD,smetrics.
 DOMAIN-KEYWORD,a8clk.
 DOMAIN-KEYWORD,a8cv.
 DOMAIN-KEYWORD,plausible.
+DOMAIN-KEYWORD,-mktg.vodafone.com
 DOMAIN-KEYWORD,wxsnsdy
 DOMAIN-KEYWORD,adwords
 DOMAIN-KEYWORD,-tracker.biliapi.net
@@ -473,6 +498,7 @@ DOMAIN-REGEX,^invenio_tracking_[\w.-]*?\.sgnapps\.com$
 DOMAIN-REGEX,^block\.s[\w.-]*?block\.com$
 DOMAIN-REGEX,^host[\w.-]*?\.rvshare\.com$
 DOMAIN-REGEX,^r\.reklam[\w.-]*?\.com$
+DOMAIN-REGEX,^dhl\.[\w.-]*?\.potabox\.com$
 DOMAIN-REGEX,^events-api[\w.-]*?\.outfit7\.com$
 DOMAIN-REGEX,^customerevents\.us-east-[\w.-]*?\.internal\.dradis\.netflix\.com$
 DOMAIN-REGEX,^cs[\w.-]*?\.mp3bars\.com$
@@ -625,6 +651,9 @@ DOMAIN-REGEX,^f-log-[\w.-]*?\.grammarly\.io$
 DOMAIN-REGEX,^f-log[\w.-]*?\.grammarly\.io$
 DOMAIN-REGEX,^c[\w.-]*?hit\.zerkalo\.io$
 DOMAIN-REGEX,^metamask[\w.-]*?\.webflow\.io$
+DOMAIN-REGEX,^[\w.-]*?-ndax-[\w.-]*?\.webflow\.io$
+DOMAIN-REGEX,^[\w.-]*?-sso-[\w.-]*?\.webflow\.io$
+DOMAIN-REGEX,^sso-[\w.-]*?\.webflow\.io$
 DOMAIN-REGEX,^eum[\w.-]*?\.instana\.io$
 DOMAIN-REGEX,^report\.[\w.-]*?\.gbqofs\.io$
 DOMAIN-REGEX,^pixel[\w.-]*?\.production-public\.tubi\.io$
