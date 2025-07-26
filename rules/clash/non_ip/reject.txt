@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-25 00:29:40
+# Generated at 2025-07-26 00:28:01
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-07-24T12:52:10.451Z
-# Size: 688
+# Last Updated: 2025-07-25T12:51:07.916Z
+# Size: 689
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -574,6 +574,7 @@ DOMAIN-REGEX,^report\.[\w.-]*?\.qq\.com$
 DOMAIN-REGEX,^apple-[\w.-]*?\.le\.com$
 DOMAIN-REGEX,^c\.blue\.[\w.-]*?\.com$
 DOMAIN-REGEX,^irs\.gov\.[\w.-]*?\.com$
+DOMAIN-REGEX,^vietcombank[\w.-]*?\.cfd$
 DOMAIN-REGEX,^plum-binder-[\w.-]*?\.typedream\.app$
 DOMAIN-REGEX,^support-metahelpcenter-id[\w.-]*?\.netlify\.app$
 DOMAIN-REGEX,^govern-assessment-validation-[\w.-]*?\.vercel\.app$
