@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-07-26 00:28:01
+# Generated at 2025-07-27 00:32:20
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-07-25T12:51:07.916Z
-# Size: 689
+# Last Updated: 2025-07-26T15:38:15.729Z
+# Size: 694
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -274,11 +274,14 @@ DOMAIN-KEYWORD,trkgbm.business.hsbc.
 DOMAIN-KEYWORD,trkhinv.business.hsbc.
 DOMAIN-KEYWORD,trkcmb.business.hsbc.
 DOMAIN-KEYWORD,-analytics-events.apple.com
+DOMAIN-KEYWORD,-ads.realmemobile.com
 DOMAIN-KEYWORD,-ad.video.yximgs.com
+DOMAIN-KEYWORD,-ad.a.yximgs.com
 DOMAIN-KEYWORD,-ad.sm.cn
 DOMAIN-KEYWORD,-ad.wtzw.com
 DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 DOMAIN-KEYWORD,-normal.zijieapi.com
+DOMAIN-KEYWORD,pangolin-sdk-toutiao
 DOMAIN-REGEX,^santander\.[\w.-]*?\.fino\.digital$
 DOMAIN-REGEX,^logs[\w.-]*?\.smithsonian\.museum$
 DOMAIN-REGEX,^bjsvp[\w.-]*?\.space$
@@ -518,12 +521,14 @@ DOMAIN-REGEX,^datacollect[\w.-]*?\.abtasty\.com$
 DOMAIN-REGEX,^js[\w.-]*?\.abolezi\.com$
 DOMAIN-REGEX,^dm[\w.-]*?\.yxlady\.com$
 DOMAIN-REGEX,^impservice[\w.-]*?\.youdao\.com$
+DOMAIN-REGEX,^ads-[\w.-]*?\.xhscdn\.com$
 DOMAIN-REGEX,^2025[\w.-]*?maintenance\.weebly\.com$
 DOMAIN-REGEX,^currentlymail[\w.-]*?\.weebly\.com$
 DOMAIN-REGEX,^testra[\w.-]*?-covid\.weebly\.com$
 DOMAIN-REGEX,^currentlyatt[\w.-]*?\.weebly\.com$
 DOMAIN-REGEX,^e-navy[\w.-]*?\.weebly\.com$
 DOMAIN-REGEX,^mcs-[\w.-]*?\.tiktok\.com$
+DOMAIN-REGEX,^ads-[\w.-]*?\.tiktok\.com$
 DOMAIN-REGEX,^cdn[\w.-]*?\.swaxis\.com$
 DOMAIN-REGEX,^d[\w.-]*?\.ruiwen\.com$
 DOMAIN-REGEX,^clk\.rtpdn[\w.-]*?\.com$
