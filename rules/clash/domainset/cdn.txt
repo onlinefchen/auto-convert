@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-07-29 00:32:13
+# Generated at 2025-07-30 00:29:25
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-07-27T14:39:33.313Z
-# Size: 3713
+# Last Updated: 2025-07-29T16:04:00.187Z
+# Size: 3714
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1268,6 +1268,7 @@ content.invisioncic.com
 media.invisioncic.com
 +.intercomcdn.com
 static.hugedomains.com
+images.hothardware.com
 media.graphassets.com
 static.gettyimages.com
 media.gettyimages.com
