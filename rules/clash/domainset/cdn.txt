@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-08-01 00:33:36
+# Generated at 2025-08-02 00:28:18
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-07-31T08:08:58.405Z
-# Size: 3729
+# Last Updated: 2025-08-01T14:43:09.678Z
+# Size: 3734
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1051,6 +1051,7 @@ cdn.unrealengine.com
 +.trackerslist.com
 resource.tnlmediagene.com
 +.tiktokcdn-us.com
++.tiktokcdn-eu.com
 static.threatlocker.com
 +.susercontent.com
 cdn.sunofbeaches.com
@@ -1718,6 +1719,8 @@ home.integrate.com
 platform.instagram.com
 static.incapsula.com
 +.imostatic.com
+vids.imagepost.com
+i.imagepost.com
 +.ibytedtos.com
 +.js.hs-banner.com
 freeshippingbar.herokuapp.com
@@ -2281,6 +2284,7 @@ moodular.jotform.com
 files.jotform.com
 js.jotform.com
 pool.jortage.com
+img2.javdove.com
 assets.ipstack.com
 i.insider.com
 static.iris.informa.com
@@ -2544,6 +2548,7 @@ sdk.qikify.com
 +.pxgcdn.com
 js.pusher.com
 +.cdn.pubnub.com
++.prppsn.com
 static.probit.com
 +.prhcdn.com
 assets.pixlee.com
