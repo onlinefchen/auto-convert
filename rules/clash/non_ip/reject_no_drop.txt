@@ -1,12 +1,12 @@
 # REJECT_NO_DROP Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-08 00:29:39
+# Generated at 2025-08-09 00:27:05
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject No Drop
-# Last Updated: 2025-07-26T11:26:48.239Z
+# Last Updated: 2025-08-08T04:16:47.835Z
 # Size: 33
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -42,10 +42,10 @@ DOMAIN-SUFFIX,p2perrorlog.douyucdn.cn
 DOMAIN-SUFFIX,p2plog.douyucdn.cn
 DOMAIN-KEYWORD,-p2p.pull.yximgs.com
 DOMAIN-KEYWORD,-p2p-v2.pull.yximgs.com
-DOMAIN-REGEX,^p2pchunk-[\w.-]*?\.douyucdn\.cn$
-DOMAIN-REGEX,^p2plive-[\w.-]*?\.douyucdn\.cn$
-DOMAIN-REGEX,^p2p[\w.-]*?-ws\.douyucdn\.cn$
-DOMAIN-REGEX,^dyp2p-[\w.-]*?\.douyucdn\.cn$
-DOMAIN-REGEX,^p2p-[\w.-]*?\.douyucdn\.cn$
+DOMAIN-WILDCARD,p2pchunk-*.douyucdn.cn
+DOMAIN-WILDCARD,p2plive-*.douyucdn.cn
+DOMAIN-WILDCARD,p2p*-ws.douyucdn.cn
+DOMAIN-WILDCARD,dyp2p-*.douyucdn.cn
+DOMAIN-WILDCARD,p2p-*.douyucdn.cn
 ################## EOF ##################
 
