@@ -1,13 +1,13 @@
 # STREAM Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-16 00:26:30
+# Generated at 2025-08-17 00:30:37
 # Source: https://ruleset.skk.moe/Clash/non_ip/stream.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Stream Services: All
-# Last Updated: 2025-08-14T13:29:47.634Z
-# Size: 281
+# Last Updated: 2025-08-16T15:53:21.149Z
+# Size: 280
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -238,7 +238,6 @@ DOMAIN-SUFFIX,kkbox.com
 DOMAIN-SUFFIX,intl-subscription.iqiyi.com
 DOMAIN-SUFFIX,intl-rcd.iqiyi.com
 DOMAIN,cache.video.iqiyi.com
-DOMAIN-SUFFIX,inter.iqiyi.com
 DOMAIN-SUFFIX,intl.iqiyi.com
 DOMAIN-SUFFIX,hbogo.com
 DOMAIN-SUFFIX,dnitv.com

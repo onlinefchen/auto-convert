@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-08-16 00:26:28
+# Generated at 2025-08-17 00:30:32
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-08-15T05:39:34.886Z
-# Size: 3825
+# Last Updated: 2025-08-16T06:04:09.441Z
+# Size: 3828
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -207,6 +207,7 @@ assets.orz.uno
 media.orz.uno
 +.filecunhua.top
 static-cdn.bytegiftia.top
+images.mooncloud.top
 +.alphafish.top
 +.mobilius.top
 +.apperoni.top
@@ -1707,6 +1708,7 @@ img.represent.com
 jfe-cdn.qualtrics.com
 js.qualified.com
 vpncdn.protonweb.com
+pmecdn.protonweb.com
 content.powerapps.com
 cdnstatic.porno-cum.com
 static.polldaddy.com
@@ -3586,6 +3588,7 @@ edge.marker.io
 website-cdn.ipinfo.io
 +.cdn.ipinfo.io
 +.ipfs.infura.io
+assets.hackmd.io
 gohugo.io
 +.gitlab.io
 +.github.io
