@@ -1,13 +1,13 @@
 # STREAM Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-17 00:30:37
+# Generated at 2025-08-18 00:30:40
 # Source: https://ruleset.skk.moe/Clash/non_ip/stream.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Stream Services: All
-# Last Updated: 2025-08-16T15:53:21.149Z
-# Size: 280
+# Last Updated: 2025-08-17T09:19:41.724Z
+# Size: 278
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -43,7 +43,6 @@
 # - KKBOX
 # - KKTV
 # - Line TV
-# - LiTV
 # - My5
 # - myTV Super
 # - Netflix
@@ -124,7 +123,6 @@ DOMAIN-SUFFIX,nflxso.net
 DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,dca-ll-livedazn-dznlivejp.s.llnwi.net
 DOMAIN-SUFFIX,jtvnw.net
-DOMAIN,litvfreemobile-hichannel.cdn.hinet.net
 DOMAIN,4gtvfreepcvod-cds.cdn.hinet.net
 DOMAIN,gamer2-cds.cdn.hinet.net
 DOMAIN,gamer-cds.cdn.hinet.net
@@ -287,7 +285,6 @@ DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,pluto.tv
 DOMAIN-SUFFIX,abema.tv
-DOMAIN-SUFFIX,litv.tv
 DOMAIN-SUFFIX,hulu.tv
 DOMAIN,chuangcachecdnoversea-tw.inter.ptqy.gitv.tv
 DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
