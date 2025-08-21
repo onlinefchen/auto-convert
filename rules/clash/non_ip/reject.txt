@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-20 00:26:32
+# Generated at 2025-08-21 00:26:28
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-08-16T14:31:25.390Z
-# Size: 751
+# Last Updated: 2025-08-20T13:20:15.662Z
+# Size: 754
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -364,6 +364,7 @@ DOMAIN-WILDCARD,geoloc*.geovisite.ovh
 DOMAIN-WILDCARD,geoloc*.geostats.ovh
 DOMAIN-WILDCARD,sportframe*.org
 DOMAIN-WILDCARD,chinhphu.*.org
+DOMAIN-WILDCARD,cancelaciondeseguros-*.azurewebsites.net
 DOMAIN-WILDCARD,pixel-*.convertagain.net
 DOMAIN-WILDCARD,*.ad.*.prod.hosts.ooklaserver.net
 DOMAIN-WILDCARD,suite*.linximpulse.net
@@ -582,6 +583,7 @@ DOMAIN-WILDCARD,currentlyatt*.weebly.com
 DOMAIN-WILDCARD,e-navy*.weebly.com
 DOMAIN-WILDCARD,mcs-*.tiktok.com
 DOMAIN-WILDCARD,ads-*.tiktok.com
+DOMAIN-WILDCARD,mcs.*.tiktok.com
 DOMAIN-WILDCARD,cdn*.swaxis.com
 DOMAIN-WILDCARD,d*.ruiwen.com
 DOMAIN-WILDCARD,clk.rtpdn*.com
@@ -650,6 +652,7 @@ DOMAIN-WILDCARD,pancake-swap*.vercel.app
 DOMAIN-WILDCARD,pancake-nft*.vercel.app
 DOMAIN-WILDCARD,azuki-*.vercel.app
 DOMAIN-WILDCARD,authsignonstaff*.softr.app
+DOMAIN-WILDCARD,gohvb-*.web.app
 DOMAIN-WILDCARD,tracking-v*.a.run.app
 DOMAIN-WILDCARD,tw-726620180914.*.run.app
 DOMAIN-WILDCARD,log*.vietnamplus.vn
