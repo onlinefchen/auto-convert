@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-22 00:26:48
+# Generated at 2025-08-23 00:25:53
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-08-21T13:19:04.154Z
-# Size: 756
+# Last Updated: 2025-08-22T13:18:05.123Z
+# Size: 758
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -433,6 +433,7 @@ DOMAIN-WILDCARD,msoftupdate.*.linodeobjects.com
 DOMAIN-WILDCARD,tiktok-svip*.com
 DOMAIN-WILDCARD,payer-ma-acture-*.mystrikingly.com
 DOMAIN-WILDCARD,ads-dmp-collect.*.karrotmarket.com
+DOMAIN-WILDCARD,event.*.karrotmarket.com
 DOMAIN-WILDCARD,messagerie*.godaddysites.com
 DOMAIN-WILDCARD,metrics*.fitanalytics.com
 DOMAIN-WILDCARD,st-*.dynamicyield.com
@@ -496,6 +497,7 @@ DOMAIN-WILDCARD,dualstack.adbert-web-lbs-*.elb.amazonaws.com
 DOMAIN-WILDCARD,beehiiv-adnetwork-production.s*.amazonaws.com
 DOMAIN-WILDCARD,reachableads-av.*.amazonaws.com
 DOMAIN-WILDCARD,mobileanalytics.*.amazonaws.com
+DOMAIN-WILDCARD,attr-logs.*.amazonaws.com
 DOMAIN-WILDCARD,client.rum.*.amazonaws.com
 DOMAIN-WILDCARD,tag-based.s3.*.amazonaws.com
 DOMAIN-WILDCARD,cookie-sl.s3.*.amazonaws.com
