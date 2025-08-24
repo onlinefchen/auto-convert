@@ -1,12 +1,12 @@
 # CHINA_IP Rules (CLASH)
 # Category: ip
-# Generated at 2025-08-23 00:25:54
+# Generated at 2025-08-24 00:29:51
 # Source: https://ruleset.skk.moe/Clash/ip/china_ip.txt
 # DNS Resolution: Yes
 
 #########################################
 # Sukka's Ruleset - Mainland China IPv4 CIDR
-# Last Updated: 2025-08-22T00:06:31.442Z
+# Last Updated: 2025-08-22T17:28:07.353Z
 # Size: 3939
 # License: CC BY-SA 2.0
 # Homepage: https://ruleset.skk.moe
@@ -500,7 +500,7 @@
 54.222.48.0/21
 54.222.57.0/24
 54.222.60.0/22
-54.222.64.0/24
+54.222.64.0/23
 54.222.70.0/23
 54.222.72.0/21
 54.222.80.0/21
@@ -2915,7 +2915,7 @@
 188.131.128.0/17
 192.55.46.0/24
 192.55.68.0/22
-192.102.204.0/23
+192.102.204.0/22
 192.140.160.0/19
 192.140.208.0/21
 192.144.128.0/17

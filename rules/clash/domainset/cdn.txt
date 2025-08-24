@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-08-23 00:25:46
+# Generated at 2025-08-24 00:29:45
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-08-22T17:28:06.359Z
-# Size: 3838
+# Last Updated: 2025-08-23T13:15:10.392Z
+# Size: 3841
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -162,6 +162,7 @@ domain.expiring-soon.xyz
 +.mirror-media.xyz
 +.packd.liuxingbaoyu.xyz
 eslint-react.xyz
+beta.eslint-react.xyz
 storage.withfabric.xyz
 +.qiniuyun22.xyz
 cdn.yinghuazy.xyz
@@ -302,6 +303,8 @@ cdn.fosstodon.org
 moderate.cleantalk.org
 +.angularjs.org
 images.videolan.org
+static.tvtropes.org
+assets.tvtropes.org
 static.tronscan.org
 cdn.tronscan.org
 static.spigotmc.org
