@@ -1,13 +1,13 @@
 # DOWNLOAD Rules (CLASH)
 # Category: domainset
-# Generated at 2025-08-24 00:29:45
+# Generated at 2025-08-25 00:28:18
 # Source: https://ruleset.skk.moe/Clash/domainset/download.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Large Files Hosting Domains
-# Last Updated: 2025-08-17T09:04:40.449Z
-# Size: 1176
+# Last Updated: 2025-08-23T13:15:10.392Z
+# Size: 1178
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -133,6 +133,7 @@ downloads.xiph.org
 +.pypi.org
 ftp.ktug.org
 cdimage.kali.org
+archive.kali.org
 http.kali.org
 download.gimp.org
 tug.ctan.org
@@ -397,6 +398,7 @@ amupdatedl2.microsoft.com
 amupdatedl.microsoft.com
 packages.microsoft.com
 cdn.winget.microsoft.com
++.update.microsoft.com
 +.download.prss.microsoft.com
 msdl.microsoft.com
 +.delivery.mp.microsoft.com
