@@ -1,13 +1,13 @@
 # GLOBAL Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-26 00:26:53
+# Generated at 2025-08-27 00:26:56
 # Source: https://ruleset.skk.moe/Clash/non_ip/global.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - General Global Services
-# Last Updated: 2025-08-16T06:04:07.614Z
-# Size: 1134
+# Last Updated: 2025-08-25T16:01:01.526Z
+# Size: 1135
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -141,6 +141,7 @@ DOMAIN-SUFFIX,lynxjs.org
 DOMAIN-SUFFIX,golang.org
 DOMAIN-SUFFIX,debian.org
 DOMAIN-SUFFIX,change.org
+DOMAIN-SUFFIX,c-span.org
 DOMAIN-SUFFIX,apibay.org
 DOMAIN-SUFFIX,afraid.org
 DOMAIN-SUFFIX,wiki2.org
