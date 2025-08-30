@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-08-29 00:26:12
+# Generated at 2025-08-30 00:24:50
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-08-28T17:09:14.146Z
-# Size: 767
+# Last Updated: 2025-08-29T05:16:02.209Z
+# Size: 769
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -564,6 +564,7 @@ DOMAIN-WILDCARD,host*.rvshare.com
 DOMAIN-WILDCARD,r.reklam*.com
 DOMAIN-WILDCARD,dhl.*.potabox.com
 DOMAIN-WILDCARD,events-api*.outfit7.com
+DOMAIN-WILDCARD,lnkdeka.standard.*.oortech.com
 DOMAIN-WILDCARD,customerevents.us-east-*.internal.dradis.netflix.com
 DOMAIN-WILDCARD,cs*.mp3bars.com
 DOMAIN-WILDCARD,dn*.ixinwei.com
@@ -650,6 +651,7 @@ DOMAIN-WILDCARD,plum-binder-*.typedream.app
 DOMAIN-WILDCARD,support-metahelpcenter-id*.netlify.app
 DOMAIN-WILDCARD,govern-assessment-validation-*.vercel.app
 DOMAIN-WILDCARD,safety-profiles-fb-ads-*.vercel.app
+DOMAIN-WILDCARD,download-wetransfer-*.vercel.app
 DOMAIN-WILDCARD,support-center-for-*.vercel.app
 DOMAIN-WILDCARD,facture-pdf-secure-*.vercel.app
 DOMAIN-WILDCARD,base-swap-frontend-*.vercel.app
