@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-08-30 00:24:41
+# Generated at 2025-08-31 00:28:47
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-08-28T11:24:00.849Z
-# Size: 3820
+# Last Updated: 2025-08-29T16:17:31.024Z
+# Size: 3823
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -100,6 +100,7 @@ js.txxx.tube
 ipfs.d.tube
 packages.jetbrains.team
 pkg-cdn.jetbrains.team
++.zenwave56.site
 res2.weblium.site
 nextra.site
 p.inari.site
@@ -2865,6 +2866,7 @@ cdn.ko-fi.com
 js.klarn.com
 static.jsbin.com
 null.jsbin.com
+icdn.javxx.com
 cdn.javmg.com
 creator-image.javhd.com
 static.javhd.com
@@ -3356,6 +3358,7 @@ s3.m.0x.mk
 api.crashguard.me
 +.rocketcdn.me
 +.javplayer.me
+cdn.daradara.me
 cf.javfree.me
 cdn.picrew.me
 cdn.glitch.me
