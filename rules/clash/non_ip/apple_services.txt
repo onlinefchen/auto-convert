@@ -1,13 +1,13 @@
 # APPLE_SERVICES Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-09-05 00:25:57
+# Generated at 2025-09-06 00:24:28
 # Source: https://ruleset.skk.moe/Clash/non_ip/apple_services.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Apple Domains
-# Last Updated: 2025-07-21T08:09:50.379Z
-# Size: 27
+# Last Updated: 2025-09-05T11:49:28.985Z
+# Size: 26
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -31,7 +31,6 @@ DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,apple.co
-PROCESS-NAME,trustd
 PROCESS-NAME,netbiosd
 PROCESS-NAME,com.apple.geod
 PROCESS-NAME,mapspushd
