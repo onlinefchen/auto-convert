@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-09-08 00:27:39
+# Generated at 2025-09-09 00:25:56
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-09-03T15:12:43.572Z
-# Size: 769
+# Last Updated: 2025-09-08T19:25:05.010Z
+# Size: 770
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -338,6 +338,7 @@ DOMAIN-WILDCARD,parkdomainreal*.site
 DOMAIN-WILDCARD,broredir*s.site
 DOMAIN-WILDCARD,amazon-*.shop
 DOMAIN-WILDCARD,allegrolokalnie.*.shop
+DOMAIN-WILDCARD,gov.*.qpon
 DOMAIN-WILDCARD,zbb.bbb.*.pics
 DOMAIN-WILDCARD,t*.playdigo.live
 DOMAIN-WILDCARD,w*statistics.info
