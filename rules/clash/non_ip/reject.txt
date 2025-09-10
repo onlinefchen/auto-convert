@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-09-09 00:25:56
+# Generated at 2025-09-10 00:25:07
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-09-08T19:25:05.010Z
-# Size: 770
+# Last Updated: 2025-09-09T05:16:03.276Z
+# Size: 771
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -479,6 +479,7 @@ DOMAIN-WILDCARD,srmdata-*.com
 DOMAIN-WILDCARD,ac*.pingguolv.com
 DOMAIN-WILDCARD,adcs-*.myappsget.com
 DOMAIN-WILDCARD,collector-*.luigisbox.com
+DOMAIN-WILDCARD,*.libaishuo.com
 DOMAIN-WILDCARD,clickstream-*.homedepot.com
 DOMAIN-WILDCARD,auth-*.hismarttv.com
 DOMAIN-WILDCARD,api-*.hismarttv.com
