@@ -1,13 +1,13 @@
 # STREAM_TW Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-09-12 00:25:04
+# Generated at 2025-09-13 00:23:40
 # Source: https://ruleset.skk.moe/Clash/non_ip/stream_tw.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Stream Services: Taiwan
-# Last Updated: 2025-08-17T09:19:41.725Z
-# Size: 32
+# Last Updated: 2025-09-12T09:56:58.047Z
+# Size: 33
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -42,6 +42,7 @@ DOMAIN-SUFFIX,linetv.tw
 DOMAIN,video.friday.tw
 DOMAIN,ana.video.friday.tw
 DOMAIN-SUFFIX,bahamut.com.tw
+DOMAIN-SUFFIX,api.gamer.com.tw
 DOMAIN-SUFFIX,ani.gamer.com.tw
 DOMAIN-SUFFIX,kktv.com.tw
 DOMAIN,www.litv.tv

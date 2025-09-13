@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-09-12 00:25:01
+# Generated at 2025-09-13 00:23:37
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-09-11T17:02:28.186Z
-# Size: 3889
+# Last Updated: 2025-09-12T11:57:21.844Z
+# Size: 3892
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -924,6 +924,7 @@ openseauserdata.com
 gt1.onlyhentaistuff.com
 fs2.onlyhentaistuff.com
 cdn.onlyhentaistuff.com
+cdn.northropgrumman.com
 irp-cdn.multiscreensite.com
 +.msftconnecttest.com
 +.motherlessmedia.com
@@ -1190,6 +1191,7 @@ assets.clickfunnels.com
 components.clever-cloud.com
 assets.clever-cloud.com
 cdn.clever-cloud.com
+static.chrome-stats.com
 +.cdninstagram.com
 cdnjs.buymeacoffee.com
 cdn.buymeacoffee.com
@@ -1438,6 +1440,7 @@ widget.trustpilot.com
 top1cdn.top1health.com
 +.teraboxcdn.com
 +.targetimg1.com
++.striiiipst.com
 cdn.streamlabs.com
 sp.streamlabs.com
 ui-statics-cf.streamable.com
