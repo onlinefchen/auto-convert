@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-09-17 00:25:43
+# Generated at 2025-09-18 00:24:49
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-09-16T18:53:12.990Z
-# Size: 3907
+# Last Updated: 2025-09-17T08:43:07.714Z
+# Size: 3919
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -297,6 +297,7 @@ cdn.autoketing.org
 creativajs.altervista.org
 upload.wikimedia.org
 cdn.travis-ci.org
+light.spicegems.org
 user-uploads.perchance.org
 s13.maxstream.org
 s11.maxstream.org
@@ -577,6 +578,8 @@ cdn.highporn.net
 connect.facebook.net
 static.esimplus.net
 pub.creaders.net
+cdn-app.cart-bot.net
+app.cart-bot.net
 assets.bitstamp.net
 cdn.beacondb.net
 damassets.autodesk.net
@@ -984,6 +987,7 @@ cdn-forum.networklessons.com
 cdn.networklessons.com
 media.nbcconnecticut.com
 image.email.microsoftemail.com
++.mediadecathlon.com
 assets.media-platform.com
 na-library.klarnaservices.com
 static.killedbygoogle.com
@@ -1168,6 +1172,7 @@ staticm.fastcomments.com
 cdn.fastcomments.com
 static.fastboostcdn.com
 +.fakestoreapi.com
++.esc-apps-cdn.com
 cdn-eu.dynamicyield.com
 st-eu.dynamicyield.com
 cdn.dynamicyield.com
@@ -2118,6 +2123,7 @@ cdn-icons-png.flaticon.com
 cdn-uicons.flaticon.com
 media.flaticon.com
 cdn.firebase.com
+widget.finlogix.com
 s3.filebase.com
 icons.ferndocs.com
 +.favicone.com
@@ -2287,6 +2293,8 @@ static.srcspot.com
 cdn.sphlabs.com
 +.snzypic.com
 sdk.snapkit.com
+cache.industry.siemens.com
+data.cdn.siemens.com
 cdn.shopify.com
 dassets.shimano.com
 cdn.sheetjs.com
@@ -2593,6 +2601,7 @@ go.vercel.com
 +.vancdn.com
 stc.utdstc.com
 img.utdstc.com
+backinstock.useamp.com
 +.devrum.uptime.com
 api.unisvg.com
 +.assets.ubuntu.com
@@ -2697,6 +2706,7 @@ images.now-tv.com
 i.niupic.com
 +.nineyu.com
 article-image-ix.nikkei.com
+instafeed.nfcube.com
 cdn.nfcube.com
 c1.newegg.com
 +.nc-img.com
@@ -3117,6 +3127,7 @@ i.bang.com
 img.atom.com
 g-static.ap4r.com
 +.a1tb.com
+bundle.9gtb.com
 accounts-cdn.9gag.com
 bundle.5gtb.com
 img.4khd.com
@@ -3900,6 +3911,7 @@ cdn.engagement.ai
 assets.cloudpilot.ai
 api.instantly.ai
 sdk.customfit.ai
+static.returngo.ai
 prod-cdn.webtune.ai
 widget.docsbot.ai
 cdn.aimerce.ai
