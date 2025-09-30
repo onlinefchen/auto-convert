@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-09-29 00:27:14
+# Generated at 2025-09-30 00:26:16
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-09-28T06:54:09.148Z
-# Size: 3936
+# Last Updated: 2025-09-28T17:16:11.496Z
+# Size: 3937
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -3085,6 +3085,7 @@ assets.play.xbox.com
 livemap-tiles1.waze.com
 web-assets.waze.com
 cdnstatic.w1mp.com
+cdn.vnoc.com
 tn.vjav.com
 vice-web-statics-cdn.vice.com
 video-images.vice.com
