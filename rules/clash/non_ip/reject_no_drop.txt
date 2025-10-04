@@ -1,13 +1,13 @@
 # REJECT_NO_DROP Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-10-03 00:25:17
+# Generated at 2025-10-04 00:24:09
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject No Drop
-# Last Updated: 2025-09-14T18:18:18.502Z
-# Size: 36
+# Last Updated: 2025-10-03T04:27:40.065Z
+# Size: 38
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -18,7 +18,9 @@ DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 DOMAIN-SUFFIX,ppio.cloud
 DOMAIN-SUFFIX,yfp2p.net
 DOMAIN-SUFFIX,yfcdn.net
+DOMAIN-SUFFIX,ietheivaicai.com
 DOMAIN-SUFFIX,onethingpcs.com
+DOMAIN-SUFFIX,nexusedgeio.com
 DOMAIN-SUFFIX,tianwenca.com
 DOMAIN-SUFFIX,pkoplink.com
 DOMAIN,qn-cdnfile1pcdn.msstatic.com
