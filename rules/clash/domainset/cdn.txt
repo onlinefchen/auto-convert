@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-10-04 00:24:04
+# Generated at 2025-10-05 00:28:14
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-10-01T13:27:33.147Z
-# Size: 3955
+# Last Updated: 2025-10-04T18:06:56.371Z
+# Size: 3960
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1504,6 +1504,7 @@ images3.cmp.optimizely.com
 images2.cmp.optimizely.com
 images1.cmp.optimizely.com
 +.cdn.optimizely.com
+static.openreplay.com
 static-www.onlyoffice.com
 +.nincontent.com
 cdn.nerdschalk.com
@@ -2491,6 +2492,7 @@ img.freepik.com
 static.foxnews.com
 a57.foxnews.com
 hp.foxnews.com
+static-cf.foxdata.com
 +.fourhoi.com
 usercontent.flodesk.com
 assets.flodesk.com
@@ -2965,6 +2967,7 @@ static-assets.juksy.com
 assets.juksy.com
 static.jsbin.com
 null.jsbin.com
+speedmedia2.jfrog.com
 icdn.javxx.com
 cdn.javmg.com
 creator-image.javhd.com
@@ -3048,6 +3051,7 @@ assets.brevo.com
 safebrowsing.brave.com
 imgs.search.brave.com
 cdn.search.brave.com
+static.bodor.com
 assets.bnidx.com
 spotlightimage.biggo.com
 images.bfmtv.com
@@ -3798,6 +3802,7 @@ static-cdn.spot.im
 launcher.spot.im
 images.spot.im
 s3.c.im
+js.nagich.co.il
 +.alexdav.id
 +.ipfs.trusti.id
 cdn.unwire.hk
