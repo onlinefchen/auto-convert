@@ -1,12 +1,12 @@
 # DOMESTIC Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-10-10 00:25:52
+# Generated at 2025-10-11 00:24:04
 # Source: https://ruleset.skk.moe/Clash/non_ip/domestic.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Domestic Domains
-# Last Updated: 2025-10-09T21:04:12.861Z
+# Last Updated: 2025-10-10T18:09:31.671Z
 # Size: 833
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -846,6 +846,6 @@ DOMAIN-SUFFIX,t.cn
 DOMAIN-SUFFIX,6.cn
 DOMAIN-SUFFIX,3.cn
 DOMAIN-SUFFIX,chaoxing.cc
-DOMAIN-WILDCARD,*.qhimgs?.com
+DOMAIN-WILDCARD,*.qhimgs
 ################## EOF ##################
 
