@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-10-15 00:26:30
+# Generated at 2025-10-16 00:26:55
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-10-14T12:28:25.787Z
-# Size: 3978
+# Last Updated: 2025-10-15T09:49:45.063Z
+# Size: 3983
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -885,6 +885,7 @@ media.datacenterdynamics.com
 +.yammerusercontent.com
 demo.unified-streaming.com
 media.theresanaiforthat.com
+media.technologycounter.com
 +.svbtleusercontent.com
 +.storjipfs-gateway.com
 +.ssl-images-amazon.com
@@ -931,6 +932,7 @@ assets.the-independent.com
 +.squarespace-cdn.com
 logos.speedtestcustom.com
 c.speedtestcustom.com
+images.softwaresuggest.com
 searchserverapi.com
 +.runkit-packages.com
 +.project1content.com
@@ -1683,6 +1685,7 @@ agi.armorgames.com
 +.anpoimages.com
 +.algolianet.com
 static.adguardvpn.com
++.adguardcdn.com
 cdn.zhujiwiki.com
 assets.zerohedge.com
 +.xhpingcdn.com
@@ -2346,6 +2349,7 @@ cdn.readmoo.com
 cdn-rdstaticassets.readdle.com
 +.ravenjs.com
 static.rakuten.com
++.rackcdn.com
 cdn.quadpay.com
 +.pxlecdn.com
 image.prntscr.com
@@ -3356,6 +3360,7 @@ thumbor.4gamers.com.tw
 img.4gamers.com.tw
 event.ithome.com.tw
 static.cnbeta.com.tw
+image.yuntu.com.tw
 pgw.udn.com.tw
 s.udn.com.tw
 p.udn.com.tw
