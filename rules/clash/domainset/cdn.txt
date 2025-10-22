@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-10-21 00:26:35
+# Generated at 2025-10-22 00:27:30
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-10-17T13:08:04.897Z
-# Size: 3989
+# Last Updated: 2025-10-21T13:51:58.835Z
+# Size: 3990
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -729,6 +729,7 @@ i.hkepc.net
 +.ftcdn.net
 +.fonts.net
 +.fmcdn.net
++.flsrv.net
 +.fbcdn.net
 +.epimg.net
 +.dwcdn.net
