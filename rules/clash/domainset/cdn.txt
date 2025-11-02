@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-11-01 00:29:12
+# Generated at 2025-11-02 00:29:03
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-10-31T16:27:14.311Z
-# Size: 3998
+# Last Updated: 2025-11-01T16:13:23.309Z
+# Size: 3999
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -2289,6 +2289,7 @@ api.weather.com
 +.wdfiles.com
 +.vox-cdn.com
 images.voguehk.com
+gdb.voanews.com
 cdn.viglink.com
 assets.vidyard.com
 play.vidyard.com
