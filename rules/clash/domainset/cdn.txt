@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-11-03 00:29:06
+# Generated at 2025-11-04 00:26:46
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-11-01T16:13:23.309Z
-# Size: 3999
+# Last Updated: 2025-11-03T15:03:48.003Z
+# Size: 3995
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -905,6 +905,7 @@ conversiongorilla.com
 b5x-sentry.1passwordservices.com
 telemetry.1passwordservices.com
 cdn.virtuoussoftware.com
++.superhumanstatic.com
 +.superfiliate-cdn.com
 +.steamusercontent.com
 +.spreadshirtmedia.com
@@ -1380,7 +1381,6 @@ cdn.fluidplayer.com
 +.firebaseapp.com
 google-ohttp-relay-safebrowsing.fastly-edge.com
 ohttp-relay1.fastly-edge.com
-apple-relay.fastly-edge.com
 live.fanmingming.com
 assets.embeddables.com
 cdn.dotaoutpost.com
@@ -1644,7 +1644,6 @@ pplx-res.cloudinary.com
 res.cloudinary.com
 +.privacy-gateway.cloudflare.com
 +.csp-reporting.cloudflare.com
-apple-relay.cloudflare.com
 favicons.teams.cloudflare.com
 cdnjs.cloudflare.com
 time.cloudflare.com
@@ -1653,8 +1652,6 @@ static.dash.cloudflare.com
 ajax.cloudflare.com
 cf-assets.www.cloudflare.com
 +.nel.cloudflare.com
-cp4.cloudflare.com
-cp2.cloudflare.com
 imagecdn.clips4sale.com
 static.clips4sale.com
 cmd-cdn.cleanmymac.com
@@ -3101,7 +3098,6 @@ events-delivery.apple.com
 lcdn-locator.apple.com
 news-assets.apple.com
 events-live.apple.com
-apple-relay.apple.com
 time.apple.com
 pba.apple.com
 static.ess.apple.com
