@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-11-06 00:27:08
+# Generated at 2025-11-07 00:28:01
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-11-04T15:07:43.766Z
-# Size: 3999
+# Last Updated: 2025-11-06T17:11:59.628Z
+# Size: 4001
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -2923,6 +2923,8 @@ tiles.windy.com
 ims.windy.com
 img.windy.com
 images.wikia.com
+images.whoer.com
+cdn.whoer.com
 content.wepik.com
 scripts.webeo.com
 cdnstatic.w4nkr.com
