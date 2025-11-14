@@ -1,13 +1,13 @@
 # STREAM Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-11-13 00:27:41
+# Generated at 2025-11-14 00:28:12
 # Source: https://ruleset.skk.moe/Clash/non_ip/stream.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Stream Services: All
-# Last Updated: 2025-11-04T15:07:42.888Z
-# Size: 281
+# Last Updated: 2025-11-13T20:33:00.155Z
+# Size: 287
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -57,6 +57,7 @@
 # - Peacock
 # - Pandora
 # - Pornhub
+# - Pluto TV
 # - SoundCloud
 # - SHOWTIME
 # - Spotify
@@ -65,6 +66,7 @@
 # - TikTok
 # - TVB Anywhere
 # - Twitch
+# - Tubi TV
 # - ViuTV
 # - Vudu
 # - WeTV
@@ -187,6 +189,7 @@ DOMAIN-SUFFIX,wetvinfo.com
 DOMAIN-SUFFIX,showtime.com
 DOMAIN,bbc.mp-pxcdn.com
 DOMAIN-SUFFIX,himalaya.com
+DOMAIN,athome.fandango.com
 DOMAIN,hbounify-prod.evergent.com
 DOMAIN-SUFFIX,discomax.com
 DOMAIN-SUFFIX,dazn-api.com
@@ -216,6 +219,8 @@ DOMAIN,prod-api.crackle.com
 DOMAIN-SUFFIX,bamgrid.com
 DOMAIN-SUFFIX,amebame.com
 DOMAIN-SUFFIX,uplynk.com
+DOMAIN,tubitv.com
+DOMAIN,www.tubitv.com
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,ocnttv.com
 DOMAIN-SUFFIX,muscdn.com
@@ -248,7 +253,7 @@ DOMAIN,np-edge.itunes.apple.com
 DOMAIN,hls-amt.itunes.apple.com
 DOMAIN,hls.itunes.apple.com
 DOMAIN,linear.tv.apple.com
-DOMAIN-SUFFIX,vudu.com
+DOMAIN,vudu.com
 DOMAIN-SUFFIX,nowe.com
 DOMAIN-SUFFIX,joox.com
 DOMAIN-SUFFIX,hulu.com
@@ -288,6 +293,8 @@ DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,pluto.tv
 DOMAIN-SUFFIX,abema.tv
+DOMAIN,tubi.tv
+DOMAIN,www.tubi.tv
 DOMAIN-SUFFIX,hulu.tv
 DOMAIN,chuangcachecdnoversea-tw.inter.ptqy.gitv.tv
 DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
@@ -311,6 +318,7 @@ DOMAIN-SUFFIX,location-plus.nhk.jp
 DOMAIN-SUFFIX,dmm.co.jp
 DOMAIN-SUFFIX,hayabusa.io
 DOMAIN-SUFFIX,abema.io
+DOMAIN-SUFFIX,production-public.tubi.io
 DOMAIN-SUFFIX,kfs.io
 DOMAIN-SUFFIX,discoveryplus.in
 DOMAIN-SUFFIX,hbogoasia.id
