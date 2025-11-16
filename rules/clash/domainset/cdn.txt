@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-11-15 00:26:42
+# Generated at 2025-11-16 00:29:52
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-11-14T20:11:06.906Z
-# Size: 4049
+# Last Updated: 2025-11-15T09:12:44.383Z
+# Size: 4050
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -488,6 +488,7 @@ cdn.trustpilot.net
 +.nelreports.net
 cdn.macstories.net
 +.live-video.net
+cdn.iplocation.net
 +.hs-scripts.net
 +.gtranslate.net
 +.faceit-cdn.net
