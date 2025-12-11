@@ -1,13 +1,13 @@
 # REJECT Rules (CLASH)
 # Category: non_ip
-# Generated at 2025-12-10 00:29:22
+# Generated at 2025-12-11 00:29:17
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject Non-IP
-# Last Updated: 2025-11-25T10:33:07.487Z
-# Size: 350
+# Last Updated: 2025-12-10T05:52:28.258Z
+# Size: 351
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -306,6 +306,7 @@ DOMAIN-KEYWORD,adobeanalytics.
 DOMAIN-KEYWORD,adobemarketing.
 DOMAIN-KEYWORD,adtarget.
 DOMAIN-KEYWORD,iqmetrics.
+DOMAIN-KEYWORD,load.tracking.
 DOMAIN-KEYWORD,-mktg.vodafone.com
 DOMAIN-KEYWORD,-business.vodafone.com
 DOMAIN-KEYWORD,-ss.checkoutera.com
