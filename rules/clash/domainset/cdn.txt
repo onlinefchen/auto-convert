@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2025-12-20 00:27:45
+# Generated at 2025-12-21 00:31:53
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-12-19T15:11:41.869Z
-# Size: 4157
+# Last Updated: 2025-12-20T14:01:57.067Z
+# Size: 4159
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1446,6 +1446,7 @@ cloudfront.codeproject.com
 +.cloudatacdn.com
 +.cdn-website.com
 events.ld.catamorphic.com
++.cartastatic.com
 cdn.calibermind.com
 e.calibermind.com
 +.bstarstatic.com
@@ -2784,6 +2785,7 @@ heatmap-external-a.strava.com
 web-assets.strava.com
 content-a.strava.com
 cdn-1.strava.com
+cdn.stonly.com
 +.ss-cdn.com
 +.sndimg.com
 +.sndcdn.com
