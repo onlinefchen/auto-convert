@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2026-01-01 00:33:34
+# Generated at 2026-01-02 00:30:12
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2025-12-31T15:10:59.816Z
-# Size: 4171
+# Last Updated: 2026-01-01T14:29:16.012Z
+# Size: 4172
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -3394,6 +3394,7 @@ st6-20.vk.com
 static-secure-uploads.ui.com
 secure-uploads.ui.com
 img.community.ui.com
+media.identity.ui.com
 status.ui.com
 static.ui.com
 assets.ecomm.ui.com
