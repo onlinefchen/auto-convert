@@ -1,13 +1,13 @@
 # GLOBAL Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-01-03 00:28:11
+# Generated at 2026-01-04 00:33:37
 # Source: https://ruleset.skk.moe/Clash/non_ip/global.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - General Global Services
-# Last Updated: 2025-12-31T17:55:18.691Z
-# Size: 1234
+# Last Updated: 2026-01-03T13:58:34.738Z
+# Size: 1235
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -438,6 +438,7 @@ DOMAIN-SUFFIX,crunchyroll.com
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,cosplay-jav.com
 DOMAIN-SUFFIX,voachinese.com
+DOMAIN-SUFFIX,vanityfair.com
 DOMAIN-SUFFIX,majsoul.union-game.com
 DOMAIN-SUFFIX,trustpilot.com
 DOMAIN-SUFFIX,tokyonline.com
