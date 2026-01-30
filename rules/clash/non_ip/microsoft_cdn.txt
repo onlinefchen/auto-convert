@@ -1,13 +1,13 @@
 # MICROSOFT_CDN Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-01-29 00:34:43
+# Generated at 2026-01-30 00:34:57
 # Source: https://ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Microsoft CDN
-# Last Updated: 2026-01-28T17:24:52.193Z
-# Size: 55
+# Last Updated: 2026-01-29T17:29:13.205Z
+# Size: 56
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -20,6 +20,7 @@
 DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 DOMAIN,res-h3.public.cdn.office.net
 DOMAIN,statics.teams.cdn.office.net
+DOMAIN,res-2.cdn.office.net
 DOMAIN,res-1.cdn.office.net
 DOMAIN,res.cdn.office.net
 DOMAIN-SUFFIX,download.windowsupdate.com
