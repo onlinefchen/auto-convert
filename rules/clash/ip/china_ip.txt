@@ -1,13 +1,13 @@
 # CHINA_IP Rules (CLASH)
 # Category: ip
-# Generated at 2026-02-16 00:37:33
+# Generated at 2026-02-17 00:37:17
 # Source: https://ruleset.skk.moe/Clash/ip/china_ip.txt
 # DNS Resolution: Yes
 
 #########################################
 # Sukka's Ruleset - Mainland China IPv4 CIDR
-# Last Updated: 2026-02-14T15:04:01.933Z
-# Size: 3869
+# Last Updated: 2026-02-16T17:30:45.276Z
+# Size: 3870
 # License: CC BY-SA 2.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1143,6 +1143,7 @@
 103.170.4.0/23
 103.174.94.0/23
 103.179.78.0/23
+103.181.164.0/23
 103.181.234.0/24
 103.183.66.0/23
 103.183.122.0/23
