@@ -1,12 +1,12 @@
 # REJECT_DROP Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-02-22 00:37:18
+# Generated at 2026-02-23 00:37:42
 # Source: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Reject And Drop
-# Last Updated: 2026-02-21T17:17:13.887Z
+# Last Updated: 2026-02-22T17:17:22.363Z
 # Size: 21
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -32,7 +32,7 @@ DOMAIN-SUFFIX,tracking.intl.miui.com
 DOMAIN-SUFFIX,beacon.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 DOMAIN,stat.youpin.mi.com
-DOMAIN-SUFFIX,f-log-extension.grammarly.io
 DOMAIN-SUFFIX,jpush.io
 DOMAIN-SUFFIX,jpush.cn
+DOMAIN-WILDCARD,f-log*.grammarly.io
 ################## EOF ##################
