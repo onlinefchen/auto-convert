@@ -1,13 +1,13 @@
 # DOWNLOAD Rules (CLASH)
 # Category: domainset
-# Generated at 2026-02-24 00:34:56
+# Generated at 2026-02-25 00:39:00
 # Source: https://ruleset.skk.moe/Clash/domainset/download.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Large Files Hosting Domains
-# Last Updated: 2026-02-23T05:58:25.052Z
-# Size: 1889
+# Last Updated: 2026-02-24T11:01:35.898Z
+# Size: 1890
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -434,6 +434,7 @@ mirror1.totbb.net
 mirrors.sonic.net
 mirror.pregi.net
 mirrors.netix.net
+mx-app-blob-prod.maxon.net
 mirror.limda.net
 mirror.init7.net
 down.filen.net
