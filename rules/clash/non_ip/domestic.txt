@@ -1,13 +1,13 @@
 # DOMESTIC Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-03-06 00:40:05
+# Generated at 2026-03-07 00:34:49
 # Source: https://ruleset.skk.moe/Clash/non_ip/domestic.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Domestic Domains
-# Last Updated: 2026-02-06T07:55:47.175Z
-# Size: 858
+# Last Updated: 2026-03-06T12:17:17.438Z
+# Size: 859
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -122,6 +122,7 @@ DOMAIN-SUFFIX,weixinbridge.com
 DOMAIN-SUFFIX,wallstreetcn.com
 DOMAIN-SUFFIX,toutiaocloud.com
 DOMAIN-SUFFIX,tencentmusic.com
+DOMAIN-SUFFIX,cm.steampowered.com
 DOMAIN-SUFFIX,segmentfault.com
 DOMAIN-SUFFIX,realmemobile.com
 DOMAIN-SUFFIX,huoshanzhibo.com
