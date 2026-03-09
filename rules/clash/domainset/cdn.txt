@@ -1,13 +1,13 @@
 # CDN Rules (CLASH)
 # Category: domainset
-# Generated at 2026-03-08 00:37:01
+# Generated at 2026-03-09 00:36:57
 # Source: https://ruleset.skk.moe/Clash/domainset/cdn.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - CDN Domains
-# Last Updated: 2026-03-06T12:17:17.957Z
-# Size: 4392
+# Last Updated: 2026-03-08T18:33:58.644Z
+# Size: 4397
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
 # GitHub: https://github.com/SukkaW/Surge
@@ -1405,6 +1405,7 @@ avatar.stefanjudis.com
 +.staticimgly.com
 +.staticblitz.com
 static.staff-start.com
++.stackassets.com
 akamai-assets.squarespace.com
 static3.squarespace.com
 static1.squarespace.com
@@ -1853,6 +1854,7 @@ quests.armorgames.com
 files.armorgames.com
 cache.armorgames.com
 agi.armorgames.com
+data3.answerbase.com
 +.anpustream.com
 +.anpoimages.com
 widget.allkeyshop.com
@@ -2023,6 +2025,7 @@ i.imagepost.com
 cdni.iconscout.com
 +.ibytedtos.com
 +.js.hs-banner.com
+cdn.himetrica.com
 freeshippingbar.herokuapp.com
 snyk-widget.herokuapp.com
 heroicons.com
@@ -2352,6 +2355,7 @@ media.gamestop.com
 assets.frontegg.com
 +.frontapp.com
 badges.frapsoft.com
+cdn.foxycart.com
 filestore.fortinet.com
 resizing.flixster.com
 static-assets-web.flixcart.com
@@ -3965,6 +3969,7 @@ cms.socialinsider.io
 edge.sitecorecloud.io
 +.opentelemetry.io
 static.ipgeolocation.io
+cdn.boostcommerce.io
 +.local.webcontainer.io
 telemetry.stepsecurity.io
 +.ipfs.scalaproject.io
