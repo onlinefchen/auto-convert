@@ -1,12 +1,12 @@
 # STREAM_TW Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-03-10 00:33:14
+# Generated at 2026-03-11 00:33:33
 # Source: https://ruleset.skk.moe/Clash/non_ip/stream_tw.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Stream Services: Taiwan
-# Last Updated: 2025-11-04T15:07:42.889Z
+# Last Updated: 2026-03-10T14:56:40.271Z
 # Size: 35
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -57,4 +57,3 @@ DOMAIN-SUFFIX,hbogoasia.id
 DOMAIN-SUFFIX,hbogoasia.hk
 PROCESS-NAME,com.linecorp.linetv
 ################## EOF ##################
-

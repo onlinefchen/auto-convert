@@ -1,12 +1,12 @@
 # NETEASEMUSIC Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-03-10 00:33:14
+# Generated at 2026-03-11 00:33:33
 # Source: https://ruleset.skk.moe/Clash/non_ip/neteasemusic.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Netease Music
-# Last Updated: 2025-07-21T08:09:50.399Z
+# Last Updated: 2026-03-10T14:56:40.489Z
 # Size: 3
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -18,4 +18,3 @@ DOMAIN,7h1s_rul35et_i5_mad3_by_5ukk4w-ruleset.skk.moe
 DOMAIN-SUFFIX,music.126.net
 DOMAIN-SUFFIX,music.163.com
 ################## EOF ##################
-

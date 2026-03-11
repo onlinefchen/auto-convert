@@ -1,12 +1,12 @@
 # DOWNLOAD Rules (CLASH)
 # Category: non_ip
-# Generated at 2026-03-10 00:33:11
+# Generated at 2026-03-11 00:33:32
 # Source: https://ruleset.skk.moe/Clash/non_ip/download.txt
 # DNS Resolution: No
 
 #########################################
 # Sukka's Ruleset - Large Files Hosting IPs
-# Last Updated: 2025-10-17T13:08:04.457Z
+# Last Updated: 2026-03-10T14:56:40.481Z
 # Size: 8
 # License: AGPL 3.0
 # Homepage: https://ruleset.skk.moe
@@ -23,4 +23,3 @@ DOMAIN-WILDCARD,cdn-*.comaps.app
 DOMAIN-WILDCARD,cdn-*.comaps.tech
 DOMAIN-WILDCARD,cdn-*.organicmaps.app
 ################## EOF ##################
-
